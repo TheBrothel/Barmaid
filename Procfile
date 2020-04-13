@@ -1,1 +1,1 @@
-worker: node .
+worker: mv config.example.json config.json && node .

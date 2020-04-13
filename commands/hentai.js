@@ -15,7 +15,7 @@ module.exports = {
 		const maxAttempts = sites.length * 2;
 
 		do {
-			site = sites[Math.floor(Math.random() * sites.length)];
+			site = sites.random();
 			attempts++;
 		} while(!site.canSearch(args) && attempts < maxAttempts);
 
@@ -58,14 +58,13 @@ class ImageBoard {
 
 		axios.get(this.searchUrl + fullTags.join(' '))
 			.then(response => {
+				const post = response.data.random();
 
-				if(!response.data[0]){
+				if(!post){
 					this.message.channel.send(`No results found on ${this.DisplayName} :frowning:`);
 
 					return;
 				}
-
-				const post = response.data[0];
 
 				this.embedPost(post);
 			})

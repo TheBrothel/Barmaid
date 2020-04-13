@@ -36,8 +36,11 @@ client.on('message', message => {
     // Grab the normalized command name.
 	const command = args.shift().toLowerCase();
 
-	if (!client.commands.has(command)) return;
+    // Ignore requests for commands that don't exist.
+    if (!client.commands.has(command)) 
+        return;
 
+    // Run our matched command.
 	try {
 		client.commands.get(command).execute(message, args);
 	} catch (error) {

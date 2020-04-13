@@ -98,55 +98,6 @@ class ImageBoard {
 	// Builds and sends the Discord Embed object 
 	// based on the search results.
 	embedPost(post) {
-		const postEmbed = new Discord.MessageEmbed()
-			.setTitle(this.displayName)
-			.setURL(this.postUrl + post.id)
-			.setImage(post.file_url);
-
-		const footer = this.buildFooter(post);
-		if(footer) postEmbed.setFooter(footer);
-
-		this.message.channel.send(postEmbed);
-	}
-
-	// Builds the site-specific field strings.
-	//
-	// Overridable.
-	buildFields(post, embed) {
-		return embed;
-	}
-
-	// Builds the site-specific post URL.
-	//
-	// Overridable.
-	buildPostURL(post) {
-		return this.postUrl;
-	}
-
-	sendNoResultsError(tags) {
-		return this.message.channel.send(`No results found on ${this.DisplayName} for \`${tags}\` :frowning:`);
-	}
-};
-
-// Image boards that allow a JSON response.
-class JSONImageBoard extends ImageBoard {
-	doSearch(tags) {
-		axios.get(this.buildSearchURL(tags))
-		.then(response => {
-			this.post = this.parseSearchResponse(response);
-
-			this.embedPost(this.post);
-		})
-		.catch(error => {
-			console.log(error);
-		});
-	}
-
-	parseSearchResponse(response) {
-		return this.post;
-	}
-
-	embedPost(post) {
 		let postEmbed = new Discord.MessageEmbed()
 			.setTitle(this.displayName)
 			.setURL(this.buildPostURL(post))
@@ -157,6 +108,9 @@ class JSONImageBoard extends ImageBoard {
 		this.message.channel.send(postEmbed);
 	}
 
+	// Builds the site-specific field strings.
+	//
+	// Overridable.
 	buildFields(post, embed) {
 		if(post.copyright)
 			embed.addField('Copyright', post.copyright, true);
@@ -171,6 +125,40 @@ class JSONImageBoard extends ImageBoard {
 			embed.addField('Score', post.score, true);
 
 		return embed;
+	}
+
+	// Builds the site-specific post URL.
+	//
+	// Overridable.
+	buildPostURL(post) {
+		return this.postUrl + post.id;
+	}
+
+	sendNoResultsError(tags) {
+		return this.message.channel.send(`No results found on ${this.DisplayName} for \`${tags}\` :frowning:`);
+	}
+};
+
+// Image boards that allow a JSON response.
+class JSONImageBoard extends ImageBoard {
+	doSearch(tags) {
+		axios.get(this.buildSearchURL(tags))
+		.then(response => {
+			if(!response.data) return this.sendNoResultsError(tags);
+
+			this.post = this.parseSearchResponse(response);
+
+			this.embedPost(this.post);
+		})
+		.catch(error => {
+			console.log(error);
+		});
+	}
+
+	// JSON-specific parser for the search resonse.
+	// Returns a post object.
+	parseSearchResponse(response) {
+		return this.post;
 	}
 }
 
@@ -204,8 +192,6 @@ class Gelbooru extends JSONImageBoard  {
 	parseSearchResponse(response) {
 		const firstResponse = response.data.random();
 
-		if(!firstResponse) return this.sendNoResultsError(tags);
-
 		return {
 			id: firstResponse.id,
 			image_url: firstResponse.file_url,
@@ -214,10 +200,6 @@ class Gelbooru extends JSONImageBoard  {
 			copyright: null,
 			character: null,
 		};
-	}
-
-	buildPostURL(post) {
-		return this.postUrl + post.id;
 	}
 }
 
@@ -245,8 +227,6 @@ class Danbooru extends JSONImageBoard  {
 	parseSearchResponse(response) {
 		const firstResponse = response.data.random();
 
-		if(!firstResponse) return this.sendNoResultsError(tags);
-
 		return {
 			id: firstResponse.id,
 			image_url: firstResponse.large_file_url || firstResponse.file_url,
@@ -255,9 +235,5 @@ class Danbooru extends JSONImageBoard  {
 			copyright: firstResponse.tag_string_copyright,
 			character: firstResponse.tag_string_character,
 		};
-	}
-
-	buildPostURL(post) {
-		return this.postUrl + post.id;
 	}
 }

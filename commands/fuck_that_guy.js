@@ -7,6 +7,6 @@ module.exports = {
 		const member = message.mentions.members.first();
 		if (!member) return;
 
-		return message.channel.send(`Yeah! Fuck ${member.nick}`);
+		return message.channel.send(`Yeah! Fuck ${member.displayName}`);
 	},
 };

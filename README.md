@@ -1,0 +1,2 @@
+# Barmaid
+Discord bot

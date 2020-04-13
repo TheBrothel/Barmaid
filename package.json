@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/TheBrothel/Barmaid#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "discord.js": "^12.1.1"
   }
 }

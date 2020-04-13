@@ -103,7 +103,8 @@ class Gelbooru extends ImageBoard  {
 			'-loli',
 			'-shota',
 			'-straight_shota',
-			'-guro'
+			'-guro',
+			'score:>=0'
 		];
 
 		super(

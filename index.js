@@ -1,7 +1,8 @@
 const fs = require('fs');
-require('./message-utils.js');
 const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');
+
+require('./message-utils.js');
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();

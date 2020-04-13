@@ -1,0 +1,23 @@
+{
+  "name": "barmaid",
+  "version": "1.0.0",
+  "description": "Discord bot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheBrothel/Barmaid.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheBrothel/Barmaid/issues"
+  },
+  "homepage": "https://github.com/TheBrothel/Barmaid#readme",
+  "dependencies": {
+    "discord.js": "^12.1.1"
+  }
+}

@@ -9,6 +9,7 @@ module.exports = {
 		const sites = [
 			new Gelbooru(message),
 			new Danbooru(message),
+			new BooruXXX(message),
 		];
 
 		let site;
@@ -234,6 +235,86 @@ class Danbooru extends JSONImageBoard  {
 			artist: firstResponse.tag_string_artist,
 			copyright: firstResponse.tag_string_copyright,
 			character: firstResponse.tag_string_character,
+		};
+	}
+}
+
+class BooruXXX extends ImageBoard  {
+	constructor(message) {
+		const baseUrl = 'https://booru.xxx/index.php';
+		const searchUrl = baseUrl + '?q=/post/list/';
+		const postUrl = baseUrl + '?q=/post/view/';
+	
+		const forcedTags = [
+		];
+
+		super(
+			message,
+			'BooruXXX',
+			baseUrl,
+			searchUrl,
+			postUrl,
+			forcedTags,
+			0
+		);
+	}
+	
+	buildSearchURL(tags, page) {
+		if(page) {
+			page = Math.floor(Math.random * page) + 1;
+		}
+
+		return this.searchUrl + tags.join(' ') + (page ? `/${page}` : '');
+	}
+
+	doSearch(tags) {
+		axios.get(this.buildSearchURL(tags))
+		.then(response => {
+			if(!response.data) return this.sendNoResultsError(tags);
+
+			const parsedPage = parse(response.data);
+
+			const maxPages = parsedPage
+				.querySelector('#paginator')
+				.querySelectorAll('a')
+				.last(2)
+				.rawText;
+				
+			axios.get(this.buildSearchURL(tags, maxPages))
+				.then(response => {
+					if(!response.data) return this.sendNoResultsError(tags);
+		
+					const parsedPage = parse(response.data);
+		
+					this.post = this.parseSearchResponse(parsedPage);
+		
+					this.embedPost(this.post);
+				})
+				.catch(error => {
+					console.log(error);
+				});
+		})
+		.catch(error => {
+			console.log(error);
+		});
+	}
+
+	parseSearchResponse(parsedPage) {
+		const firstResponse = parsedPage
+			.querySelector('#Imagesmain')
+			.querySelectorAll('a.shm-thumb-link')
+			.random()
+			.rawAttrs;
+
+		const id = /data\-post\-id=.(\d+)./i.exec(firstResponse)[1];
+
+		return {
+			id: id,
+			image_url: this.baseUrl + `?q=/image/${id}`,
+			score: null,
+			artist: null,
+			copyright: null,
+			character: null,
 		};
 	}
 }

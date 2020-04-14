@@ -10,6 +10,7 @@ module.exports = {
 			new Gelbooru(message),
 			new Danbooru(message),
 			new BooruXXX(message),
+			new Yandere(message),
 		];
 
 		let site;
@@ -145,7 +146,7 @@ class JSONImageBoard extends ImageBoard {
 	doSearch(tags) {
 		axios.get(this.buildSearchURL(tags))
 		.then(response => {
-			if(!response.data || response.data.length = 0) return this.sendNoResultsError(tags);
+			if(!response.data || response.data.length === 0) return this.sendNoResultsError(tags);
 
 			this.post = this.parseSearchResponse(response);
 
@@ -170,7 +171,7 @@ class Gelbooru extends JSONImageBoard  {
 		const postUrl = baseUrl + 'post&s=view&id=';
 	
 		const forcedTags = [
-			'rating:explicit',
+			'-rating:safe',
 			'sort:random',
 			'-loli',
 			'-shota',
@@ -211,12 +212,48 @@ class Danbooru extends JSONImageBoard  {
 		const postUrl = baseUrl + 'posts/';
 	
 		const forcedTags = [
-			'rating:explicit',
+			'-rating:safe',
 		];
 
 		super(
 			message,
 			'Danbooru',
+			baseUrl,
+			searchUrl,
+			postUrl,
+			forcedTags,
+			2
+		);
+	}
+
+	parseSearchResponse(response) {
+		const firstResponse = response.data.random();
+
+		return {
+			id: firstResponse.id,
+			image_url: firstResponse.large_file_url || firstResponse.file_url,
+			score: firstResponse.up_score - firstResponse.down_score,
+			artist: firstResponse.tag_string_artist,
+			copyright: firstResponse.tag_string_copyright,
+			character: firstResponse.tag_string_character,
+		};
+	}
+}
+
+class Yandere extends JSONImageBoard  {
+	constructor(message) {
+		const baseUrl = 'https://yande.re';
+		const searchUrl = baseUrl + 'posts.json?tags=';
+		const postUrl = baseUrl + 'posts/';
+	
+		const forcedTags = [
+			'-rating:safe',
+			'order:random',
+		];
+
+		super(
+			message,
+			'yande.re',
 			baseUrl,
 			searchUrl,
 			postUrl,

@@ -12,6 +12,8 @@ module.exports = {
 					_messages = messages.filter(m => m.author.id === mentionedUser);
 				}
 
+				_messages = _messages.filter(m => m.id !== message.id);
+
 				_messages = [..._messages];
 
 				if(_messages.length === 0) {
@@ -20,7 +22,7 @@ module.exports = {
 					return;
 				}
 
-				const _message = _messages[1][1];
+				const _message = _messages[0][1];
 				let previousMessage = _message.cleanContent;
 				let newMessage = '';
 		

@@ -1,6 +1,7 @@
 const fs = require('fs');
 const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');
+const { DB } = require('./db.js');
 
 require('./message-utils.js');
 require('./array-utils.js');
@@ -23,6 +24,8 @@ for (const file of commandFiles) {
 
 
 client.once('ready', () => {
+    DB.connect();
+
     // Let us know you're alive in the console.
 	console.log('Ready!');
 });

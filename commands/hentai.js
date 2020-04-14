@@ -298,10 +298,10 @@ class BooruXXX extends ImageBoard  {
 	
 	buildSearchURL(tags, page) {
 		if(page) {
-			page = Math.floor(Math.random * page) + 1;
+			page = Math.floor(Math.random() * page) + 1;
 		}
 
-		return this.searchUrl + tags.join(' ') + (page ? `/${page}` : '1');
+		return this.searchUrl + tags.join(' ') + (page ? `/${page}` : '/1');
 	}
 
 	doSearch(tags) {
@@ -311,11 +311,16 @@ class BooruXXX extends ImageBoard  {
 
 			const parsedPage = parse(response.data);
 
-			const maxPages = parsedPage
-				.querySelector('#paginator')
+			let maxPages = parsedPage.querySelector('#paginator');
+
+			if(!maxPages) return this.sendNoResultsError(tags);
+				
+			maxPages = maxPages
 				.querySelectorAll('a')
 				.last(2)
 				.rawText;
+
+			if(!maxPages) return this.sendNoResultsError(tags);
 				
 			axios.get(this.buildSearchURL(tags, maxPages))
 				.then(response => {

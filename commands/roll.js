@@ -8,7 +8,7 @@ module.exports = {
 		let dice = 1;
 
 		if(args.length > 2) {
-			return message.reply('Please use the command like `$roll 2 d6` or `$roll d20`');
+			return message.reply('Please use this command like `$roll 2 d6` or `$roll d20`');
 		}
 
 		for(let i = 0; i < args.length; i++) {
@@ -42,12 +42,11 @@ module.exports = {
 			max = Math.max(max, result);
 		}
 
-		results.sort(function(a, b){return b-a});
+		results.sort(function(a, b){ return b - a });
 
 		embed.setDescription('**' + results.join('** , **') + '**');
 
 		if (dice > 1) {
-
 			average = total / dice;
 
 			embed.addField('Total', total, true);

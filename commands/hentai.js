@@ -242,9 +242,9 @@ class Danbooru extends JSONImageBoard  {
 
 class Yandere extends JSONImageBoard  {
 	constructor(message) {
-		const baseUrl = 'https://yande.re';
-		const searchUrl = baseUrl + 'posts.json?tags=';
-		const postUrl = baseUrl + 'posts/';
+		const baseUrl = 'https://yande.re/';
+		const searchUrl = baseUrl + 'post.json?tags=';
+		const postUrl = baseUrl + 'post/show/';
 	
 		const forcedTags = [
 			'-rating:safe',
@@ -258,7 +258,7 @@ class Yandere extends JSONImageBoard  {
 			searchUrl,
 			postUrl,
 			forcedTags,
-			2
+			0
 		);
 	}
 
@@ -267,11 +267,11 @@ class Yandere extends JSONImageBoard  {
 
 		return {
 			id: firstResponse.id,
-			image_url: firstResponse.large_file_url || firstResponse.file_url,
-			score: firstResponse.up_score - firstResponse.down_score,
-			artist: firstResponse.tag_string_artist,
-			copyright: firstResponse.tag_string_copyright,
-			character: firstResponse.tag_string_character,
+			image_url: firstResponse.sample_url || firstResponse.file_url,
+			score: firstResponse.score,
+			artist: null,
+			copyright: null,
+			character: null,
 		};
 	}
 }

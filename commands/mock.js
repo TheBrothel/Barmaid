@@ -2,7 +2,7 @@ module.exports = {
 	name: 'mock',
 	description: 'Show somewhat what they really sound like.',
 	execute(message, args) {
-		message.channel.messages.fetch({ limit: 10 })
+		message.channel.messages.fetch({ limit: 100 })
 			.then(messages => {		
 				let _messages = messages;
 

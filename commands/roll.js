@@ -51,10 +51,8 @@ module.exports = {
 
 			embed.addField('Total', total, true);
 			embed.addField('Average', average, true);
-			embed.addField('\u200b', '\u200b', true); // Blank field
 			embed.addField('Min', min, true);
 			embed.addField('Max', max, true);
-			embed.addField('\u200b', '\u200b', true); // Blank field
 		}
 
 		message.channel.send(embed);

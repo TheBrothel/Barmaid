@@ -145,7 +145,7 @@ class JSONImageBoard extends ImageBoard {
 	doSearch(tags) {
 		axios.get(this.buildSearchURL(tags))
 		.then(response => {
-			if(!response.data) return this.sendNoResultsError(tags);
+			if(!response.data || response.data.length = 0) return this.sendNoResultsError(tags);
 
 			this.post = this.parseSearchResponse(response);
 
@@ -264,7 +264,7 @@ class BooruXXX extends ImageBoard  {
 			page = Math.floor(Math.random * page) + 1;
 		}
 
-		return this.searchUrl + tags.join(' ') + (page ? `/${page}` : '');
+		return this.searchUrl + tags.join(' ') + (page ? `/${page}` : '1');
 	}
 
 	doSearch(tags) {

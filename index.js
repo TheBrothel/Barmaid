@@ -6,6 +6,10 @@ const { DB } = require('./db.js');
 require('./message-utils.js');
 require('./array-utils.js');
 
+const blacklistedUsers = [
+    '484569795426123776',
+];
+
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
@@ -33,7 +37,9 @@ client.once('ready', () => {
 client.on('message', message => {
     // Only process the message if it starts with our prefix
     // or it's from a bot.
-    if (!message.content.startsWith(prefix) || message.author.bot) 
+    if (!message.content.startsWith(prefix) 
+        || message.author.bot
+        || blacklistedUsers.contains(message.author.id)) 
         return;
 
     // Grab the argument list.

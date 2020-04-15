@@ -1,12 +1,12 @@
 module.exports = {
-	name: 'bubble_wrap',
+	name: 'bubblewrap',
 	description: 'Just therapy',
 	execute(message, args) {
 		const probabilities = [
 			0.01,
 			0.2,
 			1,
-		];	
+		];
 
 		const values = [
 			' :tada: ',
@@ -33,7 +33,7 @@ module.exports = {
 
 			if(i < gridSize - 1) text += '\n';
 		}
-		
+
 		return message.channel.send(text);
 	},
 };

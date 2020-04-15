@@ -6,7 +6,7 @@ module.exports = {
 
     const tribute = message.mentions.members.first();
     const donor = message.author.username;
-    if(!member) return;
+    if(!tribute) return;
     //Talk to the server and update the stats
     return message.channel.send('${donor.displayName} tributed one load to ${tribute.displayName}');
   },

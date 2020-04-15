@@ -8,6 +8,6 @@ module.exports = {
     const donor = message.author.username;
     if(!tribute) return;
     //Talk to the server and update the stats
-    return message.channel.send('${donor.displayName} tributed one load to ${tribute.displayName}');
+    return message.channel.send(donor + ` tributed one load to ${tribute.displayName}`);
   },
 };

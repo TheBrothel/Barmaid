@@ -1,3 +1,4 @@
+const { MU } = require('../message-utils.js');
 const { DB } = require('../db.js');
 module.exports = {
   name: 'cumtribute',
@@ -5,20 +6,30 @@ module.exports = {
   execute(message, args){
     if(!args[0]) return;
 
-    const tribute = message.mentions.members.first();
+    //TODO: These are a bit sloppy. Clean up later.
+    const mention = message.mentions.members.first();
     const donor = message.author.username;
+    const authorId = message.author.id;
+    
+    const mentions = MU.parseMentions(message);
+    const firstMentionId = mentions[0];
+    const secondMessageId = mentions[1];
     if(args[0] == 'leaderboard'){
+      //DB.query();
       return message.channel.send('This is a stub for the leaderboard sub-command.');
     }
-    if(args[0] == 'userinfo' && tribute){
+    if(args[0] == 'userinfo' && mention){
+      DB.query(`SELECT times FROM cum_tribute_data WHERE user_id = '${firstMentionId}' AND target_id = '${$secondMentionId}'`, 
+        (rows, fields) => {
+          console.log(rows[0]['times']);
+        }
+      );
       return message.channel.send('This is a stub for the userinfo sub-command.')
     }
-    if(!tribute) return;
+    if(!mention) return;
     //Talk to the server and update the stats
-    const authorId = message.author.id;
-    const firstMentionId = [...message.mentions.users][0][0];
     DB.query(`INSERT INTO cum_tribute_data (user_id, target_id, times) VALUES ('${authorId}', '${firstMentionId}', 1) ON DUPLICATE KEY UPDATE times = times + 1`, null);
     //End server stuff
-    return message.channel.send(donor + ` tributed one load to ${tribute.displayName}`);
+    return message.channel.send(donor + ` tributed one load to ${mention.displayName}`);
   },
 };

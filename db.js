@@ -26,6 +26,9 @@ class DB {
 
                 return;
             }
+            if(!callback){
+                return;
+            }
 
             return callback(rows, fields);
         });

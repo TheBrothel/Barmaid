@@ -3,7 +3,7 @@ const axios = require('axios');
 const { parse } = require('node-html-parser');
 
 module.exports = {
-	name: 'answer',
+	name: 'yahoo',
 	description: 'Search yahoo answers',
 	execute(message, args) {
 		search(message, args);
@@ -44,7 +44,7 @@ function search(message, tags) {
 				.filter(f => /__content__/.test(f.rawAttrs))[0]
 				.querySelectorAll('p')
 				.map(f => f.text)
-				.join('\n\n');
+				.join('\n');
 
 			let postEmbed = new Discord.MessageEmbed()
 				.setTitle(title.text)

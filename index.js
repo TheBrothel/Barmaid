@@ -39,7 +39,7 @@ client.on('message', message => {
     // or it's from a bot.
     if (!message.content.startsWith(prefix) 
         || message.author.bot
-        || blacklistedUsers.contains(message.author.id)) 
+        || blacklistedUsers.includes(message.author.id)) 
         return;
 
     // Grab the argument list.

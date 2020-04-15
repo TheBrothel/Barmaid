@@ -1,9 +1,11 @@
-const { MU } = require('../message-utils.js');
+const { parseMentions } = require('../message-utils.js');
 const { DB } = require('../db.js');
+
 module.exports = {
   name: 'cumtribute',
   description: 'Nut.',
   execute(message, args){
+
     if(!args[0]) return;
 
     //TODO: These are a bit sloppy. Clean up later.
@@ -11,7 +13,7 @@ module.exports = {
     const donor = message.author.username;
     const authorId = message.author.id;
     
-    const mentions = MU.parseMentions(message);
+    const mentions = parseMentions(message);
     const firstMentionId = mentions[0];
     const secondMessageId = mentions[1];
     if(args[0] == 'leaderboard'){

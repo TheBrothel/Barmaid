@@ -146,19 +146,19 @@ module.exports = {
         const site = new Gelbooru(message);
         const siteSearch = site.search([...option.tags, ...globalTags]);
 
-        incrementCount(author, firstMention);
-
-        reply(message, author, firstMention, option, siteSearch, site);
+        incrementCount(author, firstMention,
+            reply(rows, fields, message, author, firstMention, option, siteSearch, site));        
     },
 };
 
 //Talk to the server and update the stats
-function incrementCount(author, firstMention) {
+function incrementCount(author, firstMention, callback) {
     DB.query(`INSERT INTO cum_tribute_data (user_id, target_id, times) \
-    VALUES ('${author.id}', '${firstMention.id}', 1) ON DUPLICATE KEY UPDATE times = times + 1`);
+    VALUES ('${author.id}', '${firstMention.id}', 1) ON DUPLICATE KEY UPDATE times = times + 1`,
+    callback);
 }
 
-function reply(message, author, firstMention, option, siteSearch, site) {
+function reply(rows, fields, message, author, firstMention, option, siteSearch, site) {
     DB.query(`SELECT times FROM cum_tribute_data \
         WHERE user_id = '${author.id}' AND target_id = '${firstMention.id}' UNION \
         SELECT times FROM (SELECT SUM(times) as times FROM cum_tribute_data \

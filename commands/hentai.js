@@ -4,7 +4,7 @@ const { Gelbooru, Danbooru, Yandere, BooruXXX } = require('../image-board.js');
 module.exports = {
 	name: 'hentai',
 	description: 'Search for hentai by tags',
-	execute(message, args) {
+	async execute(message, args) {
 		const sites = [
 			new Gelbooru(message),
 			new Danbooru(message),
@@ -21,6 +21,6 @@ module.exports = {
 			attempts++;
 		} while(!site.canSearch(args) && attempts < maxAttempts);
 
-		site.embedPost(site.search(args));
+		site.embedPost(await site.search(args));
 	},
 };

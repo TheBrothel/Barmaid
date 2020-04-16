@@ -147,7 +147,7 @@ module.exports = {
         const siteSearch = site.search([...option.tags, ...globalTags]);
 
         incrementCount(author, firstMention,
-            reply(rows, fields, message, author, firstMention, option, siteSearch, site));        
+            () => { reply(message, author, firstMention, option, siteSearch, site); });        
     },
 };
 

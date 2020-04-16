@@ -5,6 +5,7 @@ module.exports = {
 	name: 'booruxxx',
 	description: 'Search for hentai by tags on booruxxx',
 	execute(message, args) {
-		new BooruXXX(message).search(args);
+		const site = new BooruXXX(message);
+		site.embedPost(site.search(args));
 	},
 };

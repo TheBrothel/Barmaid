@@ -55,7 +55,7 @@ class ImageBoard {
 			return;
 		}
 
-		this.doSearch(fullTags);
+		return this.doSearch(fullTags);
 	}
 
 	// Site-specific logic to build the search URL with tags.
@@ -119,18 +119,12 @@ class ImageBoard {
 
 // Image boards that allow a JSON response.
 class JSONImageBoard extends ImageBoard {
-	doSearch(tags) {
-		axios.get(this.buildSearchURL(tags))
-		.then(response => {
-			if(!response.data || response.data.length === 0) return this.sendNoResultsError(tags);
+	async doSearch(tags) {
+		const response = await axios.get(this.buildSearchURL(tags));
 
-			this.post = this.parseSearchResponse(response);
+		if(!response.data || response.data.length === 0) return this.sendNoResultsError(tags);
 
-			this.embedPost(this.post);
-		})
-		.catch(error => {
-			console.log(error);
-		});
+		return this.parseSearchResponse(response);
 	}
 
 	// JSON-specific parser for the search resonse.
@@ -153,7 +147,12 @@ class Gelbooru extends JSONImageBoard  {
 			'-shota',
 			'-straight_shota',
 			'-guro',
-			'score:>=0'
+			'score:>=0',
+			'-blood',
+			'-urine',
+			'-pregnant',
+            '-furry', 
+            '-*absurdres', 
 		];
 
 		super(
@@ -224,7 +223,12 @@ class Yandere extends JSONImageBoard  {
 	
 		const forcedTags = [
 			'-rating:safe',
-			'order:random',
+			'order:random',,
+			'-blood',
+			'-urine',
+			'-pregnant',
+            '-furry', 
+            '-*absurdres', 
 		];
 
 		super(
@@ -280,41 +284,31 @@ class BooruXXX extends ImageBoard  {
 		return this.searchUrl + tags.join(' ') + (page ? `/${page}` : '/1');
 	}
 
-	doSearch(tags) {
-		axios.get(this.buildSearchURL(tags))
-		.then(response => {
-			if(!response.data) return this.sendNoResultsError(tags);
-
-			const parsedPage = parse(response.data);
-
-			let maxPages = parsedPage.querySelector('#paginator');
-
-			if(!maxPages) return this.sendNoResultsError(tags);
-				
-			maxPages = maxPages
-				.querySelectorAll('a')
-				.last(2)
-				.rawText;
-
-			if(!maxPages) return this.sendNoResultsError(tags);
-				
-			axios.get(this.buildSearchURL(tags, maxPages))
-				.then(response => {
-					if(!response.data) return this.sendNoResultsError(tags);
+	async doSearch(tags) {
+		const firstResponse = await axios.get(this.buildSearchURL(tags));
 		
-					const parsedPage = parse(response.data);
+		if(!firstResponse.data) return this.sendNoResultsError(tags);
+
+		const parsedPage = parse(firstResponse.data);
+
+		let maxPages = parsedPage.querySelector('#paginator');
+
+		if(!maxPages) return this.sendNoResultsError(tags);
+			
+		maxPages = maxPages
+			.querySelectorAll('a')
+			.last(2)
+			.rawText;
+
+		if(!maxPages) return this.sendNoResultsError(tags);
+			
+		const secondResponse = await axios.get(this.buildSearchURL(tags, maxPages));
 		
-					this.post = this.parseSearchResponse(parsedPage);
-		
-					this.embedPost(this.post);
-				})
-				.catch(error => {
-					console.log(error);
-				});
-		})
-		.catch(error => {
-			console.log(error);
-		});
+		if(!secondResponse.data) return this.sendNoResultsError(tags);
+	
+		const parsedPage2 = parse(secondResponse.data);
+
+		return this.parseSearchResponse(parsedPage2);
 	}
 
 	parseSearchResponse(parsedPage) {

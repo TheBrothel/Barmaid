@@ -21,6 +21,6 @@ module.exports = {
 			attempts++;
 		} while(!site.canSearch(args) && attempts < maxAttempts);
 
-		site.search(args);
+		site.embedPost(site.search(args));
 	},
 };

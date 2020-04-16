@@ -5,6 +5,7 @@ module.exports = {
 	name: 'gelbooru',
 	description: 'Search for hentai by tags on gelbooru',
 	execute(message, args) {
-		new Gelbooru(message).search(args);
+		const site = new Gelbooru(message);
+		site.embedPost(site.search(args));
 	},
 };

@@ -11,7 +11,7 @@ module.exports = {
         const secondMention = mentions[1];
         //Check to make sure the syntax is correct.
         if(!args[0] || args.length > 2){
-            return message.channel.send('The correct syntax of this command is "$tribute_info @tributer @tributee"');
+            return message.channel.send('The correct syntax of this command is "$tribute_info <@tributer> <@tributee>"');
         }
         //Execute command
         DB.query(`SELECT times FROM cum_tribute_data WHERE user_id = '${firstMention.id}' AND target_id = '${secondMention.id}'`, 

@@ -7,7 +7,7 @@ require('./message-utils.js');
 require('./array-utils.js');
 
 const blacklistedUsers = [
-    '484569795426123776',
+    '484569795426123776', // Tirar
 ];
 
 const client = new Discord.Client();
@@ -46,15 +46,17 @@ client.on('message', message => {
     const args = message.content.slice(prefix.length).split(/ +/);
     
     // Grab the normalized command name.
-	const command = args.shift().toLowerCase();
+    const command = args.shift().toLowerCase();
+    
+    const commandObject = client.commands.get(command)
+		|| client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(command));
 
     // Ignore requests for commands that don't exist.
-    if (!client.commands.has(command)) 
-        return;
+    if (!commandObject)  return;
 
     // Run our matched command.
 	try {
-		client.commands.get(command).execute(message, args);
+		commandObject.execute(message, args);
 	} catch (error) {
 		console.error(error);
 		message.reply('there was an error trying to execute that command!');

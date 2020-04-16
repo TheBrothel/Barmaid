@@ -13,7 +13,7 @@ module.exports = {
         const firstMention = mentions[0];
 
         //Make sure there was a user tagged
-        if(!firstMention) return;
+        if(!firstMention || author.id == firstMention.id) return;
 
         const globalTags = [ 
             '1girl', 
@@ -25,8 +25,7 @@ module.exports = {
             '-bestiality', 
             '-orc',
         ];
-
-
+        
         const tributeOptions = {
             'face': {
                 'tags': ['cum_on_face', '-vaginal', '-anal'],

@@ -50,7 +50,7 @@ class ImageBoard {
 		const fullTags = [...this.forcedTags, ...tags];
 
 		if(!this.canSearch(tags)){
-			this.message.channel.send(`Too many tags for ${this.DisplayName} (${fullTags.length}/${this.maxTags}) :frowning:`);
+			this.message.channel.send(`Too many tags for ${this.displayName} (${fullTags.length}/${this.maxTags}) :frowning:`);
 
 			return;
 		}
@@ -113,7 +113,7 @@ class ImageBoard {
 	}
 
 	sendNoResultsError(tags) {
-		return this.message.channel.send(`No results found on ${this.DisplayName} for \`${tags}\` :frowning:`);
+		return this.message.channel.send(`No results found on ${this.displayName} for \`${tags}\` :frowning:`);
 	}
 };
 

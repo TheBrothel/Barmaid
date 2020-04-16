@@ -3,7 +3,7 @@ const { DB } = require('../db.js');
 
 module.exports = {
     name: 'banhammer_pardon',
-    description: 'One slut to rule them all.'
+    description: 'One slut to rule them all.',
     this.execute(message, args){
         //Get stuff we need to work with
         const author = message.author;

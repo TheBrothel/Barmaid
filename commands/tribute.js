@@ -158,10 +158,10 @@ function incrementCount(author, firstMention, callback) {
     callback);
 }
 
-function reply(rows, fields, message, author, firstMention, option, siteSearch, site) {
-    DB.query(`SELECT times FROM cum_tribute_data \
+function reply(message, author, firstMention, option, siteSearch, site) {
+    DB.query(`SELECT times, 0 as trash FROM cum_tribute_data \
         WHERE user_id = '${author.id}' AND target_id = '${firstMention.id}' UNION \
-        SELECT times FROM (SELECT SUM(times) as times FROM cum_tribute_data \
+        SELECT times, 1 as trash FROM (SELECT SUM(times) as times FROM cum_tribute_data \
         WHERE target_id = '${firstMention.id}' GROUP BY target_id) a`, 
     async (rows) => {
         const tributesFromThisUser = rows[0]['times'];

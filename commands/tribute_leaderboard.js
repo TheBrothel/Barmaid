@@ -1,42 +1,53 @@
 const { parseMentions } = require('../message-utils.js');
 const { DB } = require('../db.js');
+const Discord = require('discord.js');
 
 module.exports = {
     name: 'tribute_leaderboard',
     description: 'Whos the sluttiest of them all?',
     execute(message, args){
-      //TODO: Add the fucking command lmao
       let topFiveUsers = [];
       let cumCounts = [];
       let page_offset;
+      let page = 0;
       const page_length = 10;
-      if(!args[0] || args[0] == 1 || args[0] == 0 || args[0] < 0 || args[0] >= 10000){
-        page_offset = 0;
-        if(args[0] > 10000){
-          return message.channel.send(`Very funny. This is capped at 10000 pages.`)
-        }
-      }
-      else{
-        page_offset = (args[0]-1)*page_length;
-      }
-      let page_display = page_offset/page_length+1;
-      let output_string = `***---Cumdump Tribute Leaderboard---***\n                          *Page ${page_display}*`;
+      const nf = Intl.NumberFormat();
+
       if(args.length > 1){
         console.log('The correct syntax of this command is "$tribute_leaderboard <page>". Page is optional.');
       }
 
-      DB.query(`SELECT target_id, SUM(times) FROM cum_tribute_data GROUP BY target_id ORDER BY SUM(times) DESC LIMIT ${page_offset}, 10`,
-        (rows, fields) => {
-          for(let i = 0; i < rows.length; i++){
-            topFiveUsers.push(rows[i]['target_id']);
-            cumCounts.push(rows[i]['SUM(times)']);
-          }
-          for(let i = 0; i < topFiveUsers.length; i++){
-             output_string = output_string + `\n**${message.client.users.resolve(topFiveUsers[i]).username}** : ${cumCounts[i]}`;
-          }
-          return message.channel.send(output_string);
-    
+      page = Math.min(Math.max(Math.floor(args[0] || 0) - 1, 0), Math.floor(Number.MAX_SAFE_INTEGER / page_length));
+      page_offset = page * page_length;
 
+      let embed = new Discord.MessageEmbed()
+        .setTitle(':medal: Cumdump Tribute Leaderboard :medal:')
+
+      let output_strings = [];
+
+      // Query two things:
+      // 1. The sum of stats for each target.
+      // 2. The total number of distinct targets, to find the number of pages available.
+      DB.query(`SELECT targets, a.* \
+        FROM (SELECT target_id, SUM(times) FROM cum_tribute_data \
+        GROUP BY target_id ORDER BY SUM(times) DESC LIMIT ${page_offset}, ${page_length}) a, \
+        (SELECT COUNT(DISTINCT target_id) AS targets FROM cum_tribute_data) t`,
+        (rows, fields) => {
+          const total_targets = rows[0]['targets'];
+
+          for(let i = 0; i < rows.length; i++){
+            const rank = i + page_offset + 1;
+            const userId = rows[i]['target_id'];
+            const username = message.client.users.resolve(userId).username;
+            const total = rows[i]['SUM(times)'];
+
+            output_strings.push(`#${rank} - **${username}** : ${nf.format(total)}`);
+          }
+
+          embed.setDescription(output_strings.join('\n'))
+            .setFooter(`Page ${nf.format(page + 1)} / ${nf.format(Math.ceil(total_targets / page_length))}`);
+
+          return message.channel.send(embed);
         }
       );
     },

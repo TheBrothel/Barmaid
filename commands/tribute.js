@@ -13,7 +13,12 @@ module.exports = {
         const firstMention = mentions[0];
 
         //Make sure there was a user tagged
-        if(!firstMention || author.id == firstMention.id) return;
+        if(!firstMention || args.length >= 2){
+            return message.channel.send(`The correct syntax of the command is "$tribute <@user> [cum-location]" cum-location is optional.`);
+        }
+        if(author.id == firstMention.id){
+            return message.channel.send(`What kind of sick narcissist cum tributes themselves?!?`);
+        }
 
         const globalTags = [ 
             '1girl', 

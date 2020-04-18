@@ -7,7 +7,6 @@ require('./message-utils.js');
 require('./array-utils.js');
 
 const blacklistedUsers = [
-    '484569795426123776', // Tirar
 ];
 
 const client = new Discord.Client();

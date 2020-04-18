@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'mock',
-	description: 'Show somewhat what they really sound like.',
+	description: 'Show someone what they really sound like.',
 	execute(message, args) {
 		const mentions = [...message.mentions.users];
 		const hasMentions = mentions.length > 0;

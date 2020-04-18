@@ -5,22 +5,40 @@ module.exports = {
 	name: 'hentai',
 	description: 'Search for hentai by tags',
 	async execute(message, args) {
-		const sites = [
+		let sites = [
 			new Gelbooru(message),
 			new Danbooru(message),
 			new BooruXXX(message),
 			new Yandere(message),
 		];
 
+		shuffleArray(sites);
+
 		let site;
-		let attempts = 0;
-		const maxAttempts = sites.length * 2;
+		let index = 0;
+		let result = null;
 
 		do {
-			site = sites.random();
-			attempts++;
-		} while(!site.canSearch(args) && attempts < maxAttempts);
+			site = sites[index];
 
-		site.embedPost(await site.search(args));
+			index++;
+
+			result = await site.search(args);
+		} while(result === null && index < sites.length);
+
+		if(result === null) {
+			return message.channel.send(`No results found for any sites`);
+		}
+
+		return site.embedPost(result);
 	},
 };
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+	}
+	
+	return array;
+}

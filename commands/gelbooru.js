@@ -6,6 +6,11 @@ module.exports = {
 	description: 'Search for hentai by tags on gelbooru',
 	async execute(message, args) {
 		const site = new Gelbooru(message);
-		site.embedPost(await site.search(args));
+		
+		const post = await site.search(args);
+
+		if(post === null) return site.sendNoResultsError(args);
+
+		return site.embedPost(post);
 	},
 };

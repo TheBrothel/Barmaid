@@ -68,6 +68,15 @@ module.exports = {
                     + ` cock by ${firstMention.username}'s hair, jerking off eagerly with their other hand.`
                     + ` Soon enough, ${author.username}'s balls tighten and they empty their balls straight into`
                     + ` ${firstMention.username}'s sucking mouth, filling the warm hole with delicious cum.`,
+
+                    `${firstMention.username}'s eyes bulged open wide, ${author.username}'s fat cock in their mouth` 
+                    + ` pulsing and throbbing uncontrollably. ${firstMention.username} could feel all that hot, thick` 
+                    + ` semen hitting the back of their throat, completely painting ${firstMention.username} inside, more` 
+                    + ` and more cum gushing down their throat as if ${author.username} was trying to impregnate` 
+                    + ` ${firstMention.username}'s stomach. ${author.username} finally pulled out, scraping their cock` 
+                    + ` across {firstMention.username}'s tongue, the flavour of their spent seed mixing with` 
+                    + ` {firstMention.username}'s throat slime, {firstMention.username}'s eyes rolled back as they drooled` 
+                    + ` semen out helplessly, skullfucked completely dumb.`,
                 ],
             },
             'tongue': { 'redirect': 'mouth' },

@@ -111,6 +111,6 @@ module.exports = {
 			'Flesh',
 		].random();
 
-		message.channel.reply(`You're cock's name is now **${leftWord} ${rightWord}**`);
+		message.channel.reply(`Your cock's name is now **${leftWord} ${rightWord}**`);
 	},
 };

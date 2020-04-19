@@ -24,7 +24,10 @@ function search(message, tags) {
 			.querySelector('.searchCenterMiddle')
 			.querySelectorAll('li');
 		const question = questions.random();
-		const title = question.querySelector('.title').querySelector('a');
+		let title = question.querySelector('.title');
+		title = title ? title.querySelector('a') : null;
+
+		if(!title) return message.channel.send("No results found");
 
 		const questionLink = /href=['"](.+?)['"]/i.exec(title.rawAttrs)[1];
 

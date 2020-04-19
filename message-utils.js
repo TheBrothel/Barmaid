@@ -1,3 +1,5 @@
+const Discord = require('discord.js');
+
 function getUserFromMention(mention) {
 	if (!mention) return;
 
@@ -28,7 +30,12 @@ function parseMentions(message) {
     return users;
 }
 
+function authorIsAdmin(message) {
+    return message.member.permissions.has(Discord.Permissions.ADMINISTRATOR);
+}
+
 module.exports = {
     getUserFromMention,
-    parseMentions
+    parseMentions,
+    authorIsAdmin
 }

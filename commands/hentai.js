@@ -10,7 +10,7 @@ module.exports = {
 			new Danbooru(message),
 			new BooruXXX(message),
 			new Yandere(message),
-		];
+		].filter(f => f.canSearch(args));
 
 		shuffleArray(sites);
 

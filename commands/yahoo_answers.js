@@ -47,9 +47,10 @@ function search(message, tags) {
 				.join('\n');
 
 			let postEmbed = new Discord.MessageEmbed()
-				.setTitle(title.text)
-				.setURL(questionLink)
-				.setDescription(answerContent);
+				//.setTitle(title.text)
+				//.setURL(questionLink)
+				.setDescription(answerContent)
+				.setFooter(questionLink);
 	
 			message.channel.send(postEmbed);
 		})

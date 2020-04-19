@@ -62,6 +62,15 @@ module.exports = {
 			'Bliss',
 			'Womb',
 			'Nutty',
+			'Kitty',
+			'MILF',
+			'GILF',
+			'Wet',
+			'Moist',
+			'Sloppy',
+			'Cylindrical',
+			'Foot-Long',
+			'Handy',
 		].random();
 
 		const rightWord = [
@@ -119,6 +128,8 @@ module.exports = {
 			'Sprayer',
 			'Shooter',
 			'Pump',
+			'Simp',
+			'Shrimp',
 		].random();
 
 		message.reply(`your cock's name is now **${leftWord} ${rightWord}**`);

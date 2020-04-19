@@ -59,7 +59,9 @@ module.exports = {
 			'Sex',
 			'Love',
 			'Veiny',
-			'Bliss'
+			'Bliss',
+			'Womb',
+			'Nutty',
 		].random();
 
 		const rightWord = [
@@ -109,8 +111,16 @@ module.exports = {
 			'Pistol',
 			'Muscle',
 			'Flesh',
+			'Broom',
+			'Sweeper',
+			'Cleaner',
+			'Drainer',
+			'Hose',
+			'Sprayer',
+			'Shooter',
+			'Pump',
 		].random();
 
-		message.reply(`Your cock's name is now **${leftWord} ${rightWord}**`);
+		message.reply(`your cock's name is now **${leftWord} ${rightWord}**`);
 	},
 };

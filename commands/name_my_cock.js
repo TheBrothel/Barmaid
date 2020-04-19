@@ -3,7 +3,7 @@ const { authorIsAdmin} = require('../message-utils');
 
 module.exports = {
 	name: 'name_my_cock',
-	aliases: ['cock_name', 'cockme'],
+	aliases: ['cock_name', 'cockme', 'name_my_dick', 'dick_name', 'dickme'],
 	description: 'Gives the user\'s cock a name',
 	execute(message, args) {
 		const leftWord = [
@@ -130,6 +130,11 @@ module.exports = {
 			'Pump',
 			'Simp',
 			'Shrimp',
+			'Picket',
+			'Stake',
+			'Stabber',
+			'Thief',
+			'Pecker',
 		].random();
 
 		message.reply(`your cock's name is now **${leftWord} ${rightWord}**`);

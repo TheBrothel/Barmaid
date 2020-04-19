@@ -135,6 +135,7 @@ module.exports = {
 			'Stabber',
 			'Thief',
 			'Pecker',
+			'Jock',
 		].random();
 
 		message.reply(`your cock's name is now **${leftWord} ${rightWord}**`);

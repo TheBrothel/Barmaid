@@ -51,7 +51,13 @@ module.exports = {
 			'Wide',
 			'Deep',
 			'Hump',
-			'Slimy'
+			'Slimy',
+			'Jock',
+			'Bro',
+			'Miss',
+			'Ticklish',
+			'Steamy',
+			'Sweaty',
 		].random();
 
 		const rightWord = [

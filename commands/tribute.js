@@ -1,4 +1,4 @@
-const { parseMentions } = require('../message-utils.js');
+const { parseMentions, getMemberPronounSubject, getMemberPronounPossessive, getMemberPronounObject } = require('../message-utils.js');
 const { DB } = require('../db.js');
 const { Gelbooru } = require('../image-board.js');
 const Discord = require('discord.js');
@@ -11,21 +11,31 @@ module.exports = {
         'cum_on',
         'cumin',
         'cum_in',
+        'fuck',
     ],
     description: 'Nut!',
-    execute(message, args){
+    async execute(message, args){
         //Get the stuff we need to work with
         const author = message.author;
-        const mentions = parseMentions(message);
-        const firstMention = mentions[0];
+        const firstMention = await [...message.mentions.members][0][1].fetch();
+
+        const authorName = message.member.displayName;
+        const authorSub = getMemberPronounSubject(message.member);
+        const authorPos = getMemberPronounPossessive(message.member);
+        const authorObj = getMemberPronounObject(message.member);
+
+        const mentionName = firstMention.displayName;
+        const mentionSub = getMemberPronounSubject(firstMention);
+        const mentionPos = getMemberPronounPossessive(firstMention);
+        const mentionObj = getMemberPronounObject(firstMention);
 
         //Make sure there was a user tagged
         if(!firstMention || args.length > 2){
-            return message.channel.send(`The correct syntax of the command is "$tribute <@user> [cum-location]" cum-location is optional.`);
+            return message.channel.send(`The correct syntax of the command is "$tribute <@user> [cum-location]". cum-location is optional.`);
         }
 
-        if(author.id == firstMention.id){
-            return message.channel.send(`What kind of sick narcissist cum tributes themselves?!?`);
+        if(author.id == firstMention.user.id){
+            return message.channel.send(`What kind of sick narcissist cum tributes themself?!?`);
         }
 
         const globalTags = [ 
@@ -43,16 +53,16 @@ module.exports = {
             'face': {
                 'tags': ['cum_on_face', '-vaginal', '-anal'],
                 'messages': [
-                    `${author.username} grabs ${firstMention.username}'s hair and pulls their head back to watch`
-                    + ` as ${author.username} uses their other hand to stroke their rigid cock right over`
-                    + ` ${firstMention.username}'s face. \n\n`
-                    + ` Before long, ${author.username}'s cock leaks precum onto ${firstMention.username}'s face`
-                    + ` as ${author.username} tenses. They pull back on ${firstMention.username}'s hair more and`
-                    + ` unloads thick ropes of cum across their face with a satisfied groan.`,
+                    `${authorName} grabs ${mentionName}'s hair and pulls ${mentionPos} head back to watch`
+                    + ` as ${authorName} uses ${authorPos} other hand to stroke ${authorPos} rigid cock right over`
+                    + ` ${mentionName}'s face. \n\n`
+                    + ` Before long, ${authorName}'s cock leaks precum onto ${mentionName}'s face`
+                    + ` as ${authorSub} tenses. ${authorSub.uc()} pulls back on ${mentionPos} hair more and`
+                    + ` unloads thick ropes of cum across ${mentionPos} face with a satisfied groan.`,
 
-                    `With a relieved groan, ${author.username} gives their needy cock a few more furious pumps`
-                    + ` before firing a sticky shot of cum across the ${firstMention.username}'s face from hair to chin,`
-                    + ` letting the next few pumps fly carelessly into ${firstMention.username}'s mouth and cheeks.`,
+                    `With a relieved groan, ${authorName} gives ${authorPos} needy cock a few more furious pumps`
+                    + ` before firing a sticky shot of cum across ${mentionName}'s face from hair to chin,`
+                    + ` letting the next few pumps fly carelessly into ${mentionPos} mouth and cheeks.`,
                 ],
             },
             'eyes': { 'redirect': 'face' },
@@ -64,18 +74,18 @@ module.exports = {
             'mouth': {
                 'tags': ['cum_in_mouth', '-vaginal', '-anal'],
                 'messages': [
-                    `${author.username} drags ${firstMention.username}'s lips over the head of their`
-                    + ` cock by ${firstMention.username}'s hair, jerking off eagerly with their other hand.`
-                    + ` Soon enough, ${author.username}'s balls tighten and they empty their balls straight into`
-                    + ` ${firstMention.username}'s sucking mouth, filling the warm hole with delicious cum.`,
+                    `${authorName} drags ${mentionName}'s lips over the head of ${authorPos}`
+                    + ` cock by ${mentionName}'s hair, jerking off eagerly with ${authorPos} other hand.`
+                    + ` Soon enough, ${authorPos} balls tighten and ${authorSub} empties ${authorPos}`
+                    + ` balls straight into ${mentionName}'s sucking mouth, filling the warm hole with delicious cum.`,
 
-                    `${firstMention.username}'s eyes bulged open wide, ${author.username}'s fat cock in their mouth` 
-                    + ` pulsing and throbbing uncontrollably. ${firstMention.username} could feel all that hot, thick` 
-                    + ` semen hitting the back of their throat, completely painting ${firstMention.username} inside, more` 
-                    + ` and more cum gushing down their throat as if ${author.username} was trying to impregnate` 
-                    + ` ${firstMention.username}'s stomach. ${author.username} finally pulled out, scraping their cock` 
-                    + ` across {firstMention.username}'s tongue, the flavour of their spent seed mixing with` 
-                    + ` {firstMention.username}'s throat slime, {firstMention.username}'s eyes rolled back as they drooled` 
+                    `${mentionName}'s eyes bulged open wide, ${authorName}'s fat cock in ${mentionPos} mouth` 
+                    + ` pulsing and throbbing uncontrollably. ${mentionName} could feel all that hot, thick` 
+                    + ` semen hitting the back of ${mentionPos} throat, completely painting ${mentionObj} inside, more` 
+                    + ` and more cum gushing down ${mentionPos} throat as if ${authorName} was trying to impregnate` 
+                    + ` ${mentionPos} stomach. ${authorName} finally pulled out, scraping ${authorPos} cock` 
+                    + ` across ${mentionName}'s tongue, the flavour of ${authorPos} spent seed mixing with` 
+                    + ` ${mentionName}'s throat slime, ${mentionPos} eyes rolled back as ${mentionSub} drooled` 
                     + ` semen out helplessly, skullfucked completely dumb.`,
                 ],
             },
@@ -86,10 +96,10 @@ module.exports = {
             'breasts': {
                 'tags': ['cum_on_breasts', '-vaginal', '-anal'],
                 'messages': [
-                    `${author.username} aims their cock at ${firstMention.username}'s exposed tits, jerking`
-                    + ` the rigid shaft eagerly as their climax builds. A thick spray of pent-up cum glazes`
-                    + ` ${firstMention.username}'s chest as ${author.username} keeps pumping, a large load`
-                    + ` soon dripping down ${firstMention.username}'s body.`,
+                    `${authorName} aims ${authorPos} cock at ${mentionName}'s exposed tits, jerking`
+                    + ` the rigid shaft eagerly as ${authorPos} climax builds. A thick spray of pent-up cum glazes`
+                    + ` ${mentionName}'s chest as ${authorName} keeps pumping, a large load`
+                    + ` soon dripping down ${mentionPos} body.`,
                 ],
             },
             'tits': { 'redirect': 'breasts' },
@@ -99,18 +109,18 @@ module.exports = {
             'pussy': {
                 'tags': ['cum_in_pussy', '-anal'],
                 'messages': [
-                    `${author.username} holds ${firstMention.username} by the hips tightly as they`
-                    + ` thrust with desperate need. Within moments, ${author.username} bottoms out in`
-                    + ` ${firstMention.username}'s pussy roughly before arching their back and emptying`
-                    + ` hot ropes of cum deep inside her, excess semen quickly leaking`
+                    `${authorName} holds ${mentionName} by ${mentionPos} hips tightly as ${authorSub}`
+                    + ` thrusts with desperate need. Within moments, ${authorSub} bottoms out in`
+                    + ` ${mentionName}'s pussy roughly before arching ${authorPos} back and emptying`
+                    + ` hot ropes of cum deep inside ${mentionObj}, excess semen quickly leaking`
                     + ` out around where the two are connected.`,
 
-                    `${author.username} bends ${firstMention.username} over against the wall, kicking her feet`
-                    + ` further apart and teasing the head of their rigid cock up and down her pussy lips. With`
-                    + ` an unceremonious thrust forward, ${author.username} stretches ${firstMention.username} over`
-                    + ` themself like a sleeve and starts using her cunt to milk their cock. Before long, ${author.username}`
-                    + ` drives into her hard enough to stumble her forward as they relieve their heavy balls, splashing`
-                    + ` thick cum deep inside her.`,
+                    `${authorName} bends ${mentionName} over against the wall, kicking ${mentionPos} feet`
+                    + ` further apart and teasing the head of ${authorPos} rigid cock up and down ${mentionPos}`
+                    + ` pussy lips. With an unceremonious thrust forward, ${authorName} stretches ${mentionName} over`
+                    + ` ${authorObj}self like a sleeve and starts using ${mentionPos} cunt to milk ${authorPos}`
+                    + ` cock. Before long, ${authorName} drives into ${mentionObj} hard enough to stumble ${mentionObj}` 
+                    + ` forward as ${authorSub} relieves ${authorPos} heavy balls, splashing thick cum deep inside ${mentionObj}.`,
                 ],
             },
             'cunt': { 'redirect': 'pussy' },
@@ -125,16 +135,17 @@ module.exports = {
             'ass': {
                 'tags': ['cum_in_ass', '-vaginal'],
                 'messages': [
-                    `${author.username} pulls back on ${firstMention.username}'s hips roughly as they fuck,`
-                    + ` ${firstMention.username}'s ass stretched pleasurable over ${author.username}'s needy cock.`
-                    + ` ${author.username} lets out a deep groan as they start pouring their hot load into the tight`
-                    + ` hole, not stopping their hips until ${firstMention.username}'s ass is leaking fresh cum down`
-                    + ` their thighs.`,
+                    `${authorName} pulls back on ${mentionName}'s hips roughly as they fuck,`
+                    + ` ${mentionPos} ass stretched pleasurable over ${authorPos} needy cock.`
+                    + ` ${authorSub.uc()} lets out a deep groan as ${authorSub} starts pouring`
+                    + ` ${authorPos} hot load into the tight`
+                    + ` hole, not stopping ${authorPos} hips until ${mentionName}'s ass is leaking fresh cum down`
+                    + ` ${mentionPos} thighs.`,
 
-                    `As ${author.username} pounds away at ${firstMention.username}'s ass with loud smacks of their skin,`
-                    + ` ${author.username} suddenly tenses up and drives their cock down into the abused fuckhole with their`
-                    + ` weight. Thick sprays of cum paint the inside of ${firstMention.username}'s body as ${author.username}'s`
-                    + ` cock pulses with relief.`,
+                    `As ${authorName} pounds away at ${mentionName}'s ass with loud smacks of their skin,`
+                    + ` ${authorName} suddenly tenses up and drives ${authorPos} cock down into the abused`
+                    + ` fuckhole with ${authorPos} weight. Thick sprays of cum paint the inside of`
+                    + ` ${mentionName}'s body as ${authorName}'s cock pulses with relief.`,
                 ],
             },
             'asshole': { 'redirect': 'ass' },
@@ -142,10 +153,11 @@ module.exports = {
             'ear': {
                 'tags': ['ear_insertion', '-tentacles', '-slugs'],
                 'messages': [
-                    `${author.username} grabs ${firstMention.username}'s head in both hands, covering ${firstMention.username}'s`
-                    + ` face with their palm as they roughly rub their hard cock against ${firstMention.username}'s defenseless ear.`
-                    + ` Eventually, ${author.username} pulls their hips back enough to press the head of their leaking cock into the`
-                    + ` exposed ear and unloads waves of hot, sticky cum, trying to soak ${firstMention.username}'s brain in it directly.`,
+                    `${authorName} grabs ${mentionName}'s head in both hands, covering ${mentionPos}`
+                    + ` face with ${authorPos} palm as ${authorSub} roughly rubs ${authorPos}`
+                    + ` hard cock against ${mentionName}'s defenseless ear. Eventually, ${authorSub} pulls`
+                    + ` ${authorPos} hips back enough to press the head of ${authorPos} leaking cock into the`
+                    + ` exposed ear and unloads waves of hot, sticky cum, trying to soak ${mentionName}'s brain in it directly.`,
                 ],
             },
         };
@@ -156,22 +168,22 @@ module.exports = {
         const siteSearch = site.search([...option.tags, ...globalTags]);
 
         incrementCount(author, firstMention,
-            () => { reply(message, author, firstMention, option, siteSearch, site); });        
+            () => { reply(message, author, authorName, firstMention, mentionName, option, siteSearch, site); });        
     },
 };
 
 //Talk to the server and update the stats
 function incrementCount(author, firstMention, callback) {
     DB.query(`INSERT INTO cum_tribute_data (user_id, target_id, times) \
-    VALUES ('${author.id}', '${firstMention.id}', 1) ON DUPLICATE KEY UPDATE times = times + 1`,
+    VALUES ('${author.id}', '${firstMention.user.id}', 1) ON DUPLICATE KEY UPDATE times = times + 1`,
     callback);
 }
 
-function reply(message, author, firstMention, option, siteSearch, site) {
+function reply(message, author, authorName, firstMention, mentionName, option, siteSearch, site) {
     DB.query(`SELECT times, 0 as trash FROM cum_tribute_data \
-        WHERE user_id = '${author.id}' AND target_id = '${firstMention.id}' UNION \
+        WHERE user_id = '${author.id}' AND target_id = '${firstMention.user.id}' UNION \
         SELECT times, 1 as trash FROM (SELECT SUM(times) as times FROM cum_tribute_data \
-        WHERE target_id = '${firstMention.id}' GROUP BY target_id) a`, 
+        WHERE target_id = '${firstMention.user.id}' GROUP BY target_id) a`, 
     async (rows) => {
         const tributesFromThisUser = rows[0]['times'];
         const totalTributes = rows[1]['times'];
@@ -180,8 +192,8 @@ function reply(message, author, firstMention, option, siteSearch, site) {
             let embed = new Discord.MessageEmbed()
                 .setImage(post.image_url)
                 .setDescription(option.messages.random())
-                .addField(`Loads from ${author.username}`, tributesFromThisUser, true)
-                .addField(`Total loads for ${firstMention.username}`, totalTributes, true)
+                .addField(`Loads from ${authorName}`, tributesFromThisUser, true)
+                .addField(`Total loads for ${mentionName}`, totalTributes, true)
                 .setFooter(site.buildPostURL(post));
 
             message.channel.send(embed);

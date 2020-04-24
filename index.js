@@ -5,6 +5,7 @@ const { DB } = require('./db.js');
 
 require('./message-utils.js');
 require('./array-utils.js');
+require('./string-utils.js');
 
 const blacklistedUsers = [
 ];

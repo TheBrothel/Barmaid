@@ -34,8 +34,45 @@ function authorIsAdmin(message) {
     return message.member.permissions.has(Discord.Permissions.ADMINISTRATOR);
 }
 
+function getMemberPronounSubject(member) {
+    return getMemberPronoun(member, {
+        'RP - Female': 'she',
+        'RP - Male': 'he',
+        'default': 'they',
+    });
+}
+
+function getMemberPronounPossessive(member) {
+    return getMemberPronoun(member, {
+        'RP - Female': 'her',
+        'RP - Male': 'his',
+        'default': 'their',
+    });
+}
+
+function getMemberPronounObject(member) {
+    return getMemberPronoun(member, {
+        'RP - Female': 'her',
+        'RP - Male': 'him',
+        'default': 'them',
+    });
+}
+
+function getMemberPronoun(member, map) {
+    for (const [role, word] of Object.entries(map)) {
+        if(member.roles.cache.find(f => f.name === role)){
+            return word;
+        }
+    }
+
+    return map['default'];
+}
+
 module.exports = {
     getUserFromMention,
     parseMentions,
-    authorIsAdmin
+    authorIsAdmin,
+    getMemberPronounPossessive,
+    getMemberPronounSubject,
+    getMemberPronounObject,
 }

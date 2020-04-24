@@ -97,6 +97,7 @@ module.exports = {
 			'Addict',
 			'Fanatic',
 			'Box',
+			'Biscuit',
 		].random();
 
 		message.reply(`your pussy's name is now **${leftWord} ${rightWord}**`);

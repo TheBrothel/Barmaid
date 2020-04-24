@@ -71,6 +71,7 @@ module.exports = {
 			'Cylindrical',
 			'Foot-Long',
 			'Handy',
+			'Biscuit',
 		].random();
 
 		const rightWord = [

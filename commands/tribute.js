@@ -63,6 +63,11 @@ module.exports = {
                     `With a relieved groan, ${authorName} gives ${authorPos} needy cock a few more furious pumps`
                     + ` before firing a sticky shot of cum across ${mentionName}'s face from hair to chin,`
                     + ` letting the next few pumps fly carelessly into ${mentionPos} mouth and cheeks.`,
+
+                    `A large cock looming over ${mentionName}'s face, ${mentionPos} mouth working at the balls as`
+                    + ` ${authorName} jerks ${authorPos} cock with both hands, ${mentionName}'s hands digging into`
+                    + ` ${authorPos} legs with anticipation. A few moments and large streams of thick seed spray all`
+                    + ` over ${mentionPos} face as ${mentionSub} hears ${authorName} moan out in ecstasy.`,
                 ],
             },
             'eyes': { 'redirect': 'face' },
@@ -87,6 +92,12 @@ module.exports = {
                     + ` across ${mentionName}'s tongue, the flavour of ${authorPos} spent seed mixing with` 
                     + ` ${mentionName}'s throat slime, ${mentionPos} eyes rolled back as ${mentionSub} drooled` 
                     + ` semen out helplessly, skullfucked completely dumb.`,
+
+                    `As ${authorName} grabs on to the back of ${mentionName}'s head, ${mentionSub} can feel the strong`
+                    + ` scent hit ${mentionPos} nose, the cock pushing deep inside ${mentionPos} throat as ${mentionSub}`
+                    + ` teases at the balls with cum drunk hands. With a grunt and a slow pullout, ${authorName} cums`
+                    + ` down ${mentionName}'s throat and all over ${mentionPos} tongue, leaving the delicious taste`
+                    + ` lingering in ${mentionPos} mouth.`,
                 ],
             },
             'tongue': { 'redirect': 'mouth' },
@@ -100,6 +111,12 @@ module.exports = {
                     + ` the rigid shaft eagerly as ${authorPos} climax builds. A thick spray of pent-up cum glazes`
                     + ` ${mentionName}'s chest as ${authorName} keeps pumping, a large load`
                     + ` soon dripping down ${mentionPos} body.`,
+
+                    `Pushing ${authorName} on to a chair, enveloping the giant cock in front of ${mentionObj} with`
+                    + ` ${mentionPos} breasts, ${mentionName} starts to jerk it with a methodical rythm, drawing out`
+                    + ` ${authorPos} moans. As ${authorSub} nears release, ${mentionSub} pumps faster, the ropes of cum`
+                    + ` flying up at first, only to be swallowed by the embrace of the soft tits that brought ${authorObj}`
+                    + ` to the edge.`,
                 ],
             },
             'tits': { 'redirect': 'breasts' },
@@ -121,6 +138,12 @@ module.exports = {
                     + ` ${authorObj}self like a sleeve and starts using ${mentionPos} cunt to milk ${authorPos}`
                     + ` cock. Before long, ${authorName} drives into ${mentionObj} hard enough to stumble ${mentionObj}` 
                     + ` forward as ${authorSub} relieves ${authorPos} heavy balls, splashing thick cum deep inside ${mentionObj}.`,
+
+                    `With a welcoming smile and legs pushed back, ${mentionName} watches as ${authorName} enters ${mentionPos}`
+                    + ` needy cunt, the wetness making it easily hit the walls of ${mentionPos} womb as ${authorName} pumps`
+                    + ` inside ${mentionObj} with reckless abbandon. With a mutual grunt and nails digging into soft flesh,`
+                    + ` ${authorSub} cums deep inside ${mentionPos} waiting womb, impregnating ${mentionName} with a steady`
+                    + ` stream of heavy seed.`
                 ],
             },
             'cunt': { 'redirect': 'pussy' },
@@ -146,6 +169,12 @@ module.exports = {
                     + ` ${authorName} suddenly tenses up and drives ${authorPos} cock down into the abused`
                     + ` fuckhole with ${authorPos} weight. Thick sprays of cum paint the inside of`
                     + ` ${mentionName}'s body as ${authorName}'s cock pulses with relief.`,
+
+                    `On all fours with hands gripping the sides of ${mentionPos} welcoming ass, ${mentionName}`
+                    + ` moans loudly as ${authorName}'s thick and meaty cock pushes inside, rearranging`
+                    + ` ${mentionPos} guts. As the mix of pain and pleasure pushes ${mentionName} into cumming`
+                    + ` hard, ${authorName} tenses and grunts around the tight ass that slowly milks the load`
+                    + ` inside ${authorPos} balls.`,
                 ],
             },
             'asshole': { 'redirect': 'ass' },

@@ -31,6 +31,8 @@ module.exports = {
 
         //We will add to this, but only if necessary later on!
         var customText = '';
+        let tempArgs = args.slice();
+        tempArgs.splice(0, 2);
 
         //Make sure there was a user tagged
         if(!firstMention){
@@ -221,19 +223,16 @@ module.exports = {
                 ],
             },
             'foot': { 'redirect': 'feet' },
+                    
+            'custom': {
+                'tags': ['cum'],
+                'messages': [
+                    tempArgs.join(' '),
+                ],
+            },
         };
 
         let option = resolveLocation(args[1], tributeOptions);
-
-        if(args[1].toLowerCase() === 'custom'){
-            let trashArgs = args;
-
-            trashArgs.splice(0, 2);
-
-            customText = trashArgs.join(' ');
-            
-            option.messages = [ customText ];
-        }
 
         const site = new Gelbooru(message);
         const siteSearch = site.search([...option.tags, ...globalTags]);

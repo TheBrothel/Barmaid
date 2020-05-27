@@ -221,29 +221,18 @@ module.exports = {
                 ],
             },
             'foot': { 'redirect': 'feet' },
-
-            'custom': {
-                'tags': ['cum', ...globalTags],
-                'messages': [
-                    `test`
-                    + `${customText}`,
-                ],
-            },
         };
 
-        //If we have custom, this *should* populate the var customText with the user text before we actually use ${customText}
-        if(args[1] === 'custom'){
+        let option = resolveLocation(args[1], tributeOptions);
+
+        if(args[1].toLowerCase() === 'custom'){
             let trashArgs = args;
 
             trashArgs.splice(0, 2);
 
             customText = trashArgs.join(' ');
-        }
-
-        const option = resolveLocation(args[1], tributeOptions);
-
-        if(args[1] === 'custom'){
-            option.messages = [customText];
+            
+            option.messages = [ customText ];
         }
 
         const site = new Gelbooru(message);

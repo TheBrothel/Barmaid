@@ -29,8 +29,7 @@ module.exports = {
         const mentionPos = getMemberPronounPossessive(firstMention);
         const mentionObj = getMemberPronounObject(firstMention);
 
-        //We will add to this, but only if necessary later on!
-        var customText = '';
+        // Stash our custom text, if we need it later.
         let tempArgs = args.slice();
         tempArgs.splice(0, 2);
 

@@ -29,8 +29,11 @@ module.exports = {
         const mentionPos = getMemberPronounPossessive(firstMention);
         const mentionObj = getMemberPronounObject(firstMention);
 
+        //We will add to this, but only if necessary later on!
+        var customText = ``;
+
         //Make sure there was a user tagged
-        if(!firstMention || args.length > 2){
+        if(!firstMention){
             return message.channel.send(`The correct syntax of the command is "$tribute <@user> [cum-location]". cum-location is optional.`);
         }
 
@@ -218,7 +221,23 @@ module.exports = {
                 ],
             },
             'foot': { 'redirect': 'feet' },
+
+            'custom': {
+                'tags': ['cum_in_pussy', 'cum_on_face', 'cum_in_ass', 'cum_in_mouth'],
+                'messages': [
+                    `test`
+                    + `${customText}`,
+                ],
+            },
         };
+
+        //If we have custom, this *should* populate the var customText with the user text before we actually use ${customText}
+        if(args[1] == 'custom'){
+            for(i = 2; i < args.length; i++){
+                customText = customText + args[i];
+            }
+            customText = customText + "the if statement works lol";
+        }
 
         const option = resolveLocation(args[1], tributeOptions);
 

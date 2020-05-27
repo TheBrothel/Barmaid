@@ -223,7 +223,7 @@ module.exports = {
             'foot': { 'redirect': 'feet' },
 
             'custom': {
-                'tags': ['cum_in_pussy', 'cum_on_face', 'cum_in_ass', 'cum_in_mouth'],
+                'tags': ['cum', ...globalTags],
                 'messages': [
                     `test`
                     + `${customText}`,
@@ -241,6 +241,10 @@ module.exports = {
         }
 
         const option = resolveLocation(args[1], tributeOptions);
+
+        if(args[1] === 'custom'){
+            option.messages = [customText];
+        }
 
         const site = new Gelbooru(message);
         const siteSearch = site.search([...option.tags, ...globalTags]);

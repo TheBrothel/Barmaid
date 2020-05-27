@@ -56,6 +56,7 @@ module.exports = {
         const tributeOptions = {
             'face': {
                 'tags': ['cum_on_face', '-vaginal', '-anal'],
+                'global_tag_excludes': [ ],
                 'messages': [
                     `${authorName} grabs ${mentionName}'s hair and pulls ${mentionPos} head back to watch`
                     + ` as ${authorName} uses ${authorPos} other hand to stroke ${authorPos} rigid cock right over`
@@ -82,6 +83,7 @@ module.exports = {
 
             'mouth': {
                 'tags': ['cum_in_mouth', '-vaginal', '-anal'],
+                'global_tag_excludes': [ ],
                 'messages': [
                     `${authorName} drags ${mentionName}'s lips over the head of ${authorPos}`
                     + ` cock by ${mentionName}'s hair, jerking off eagerly with ${authorPos} other hand.`
@@ -129,6 +131,7 @@ module.exports = {
 
             'breasts': {
                 'tags': ['cum_on_breasts', '-vaginal', '-anal'],
+                'global_tag_excludes': [ ],
                 'messages': [
                     `${authorName} aims ${authorPos} cock at ${mentionName}'s exposed tits, jerking`
                     + ` the rigid shaft eagerly as ${authorPos} climax builds. A thick spray of pent-up cum glazes`
@@ -148,6 +151,7 @@ module.exports = {
 
             'pussy': {
                 'tags': ['cum_in_pussy', '-anal'],
+                'global_tag_excludes': [ ],
                 'messages': [
                     `${authorName} holds ${mentionName} by ${mentionPos} hips tightly as ${authorSub}`
                     + ` thrusts with desperate need. Within moments, ${authorSub} bottoms out in`
@@ -180,6 +184,7 @@ module.exports = {
 
             'ass': {
                 'tags': ['cum_in_ass', '-vaginal'],
+                'global_tag_excludes': [ ],
                 'messages': [
                     `${authorName} pulls back on ${mentionName}'s hips roughly as they fuck,`
                     + ` ${mentionPos} ass stretched pleasurable over ${authorPos} needy cock.`
@@ -204,6 +209,7 @@ module.exports = {
 
             'ear': {
                 'tags': ['ear_insertion', '-tentacles', '-slugs'],
+                'global_tag_excludes': [ ],
                 'messages': [
                     `${authorName} grabs ${mentionName}'s head in both hands, covering ${mentionPos}`
                     + ` face with ${authorPos} palm as ${authorSub} roughly rubs ${authorPos}`
@@ -215,6 +221,7 @@ module.exports = {
                     
             'feet': {
                 'tags': ['cum_on_feet', 'toes', '-vaginal', '-anal'],
+                'global_tag_excludes': [ ],
                 'messages': [
                     `${authorName} holds ${mentionName}'s feet in both hands, sliding ${authorPos} dick between them.`
                     + ` ${mentionName} giggles as ${authorName} begins thrusting ${authorPos} dick back and forth bewteen`
@@ -225,19 +232,21 @@ module.exports = {
             'toes': { 'redirect': 'feet' },
             
             'boipussy': {
-                'tags': ['cum_in_ass', 'trap', '-vaginal'],
-                 'messages': [
-                     `${mentionName} spreads ${mentionPos} smooth ass, showing it off for ${authorName}.` 
-                     + `${authorName} grabs ${mentionName} roughly, poking the tip of ${authorPos} cock into`
-                     + `${mentionPos} tight asshole. ${mentionName} moans loudly, and ${mentionPos} dick drips with precum.` 
-                     + `${authorName}'s cock fills ${mentionName}'s ass with cum, the hot liquid overflowing and pooling at their feet.`
-                 ],
+                'tags': ['cum_in_ass', 'trap', '-vaginal', '2boys'],
+                'global_tag_excludes': ['1girl', '1boy'],
+                'messages': [
+                    `${mentionName} spreads ${mentionPos} smooth ass, showing it off for ${authorName}.` 
+                    + `${authorName} grabs ${mentionName} roughly, poking the tip of ${authorPos} cock into`
+                    + `${mentionPos} tight asshole. ${mentionName} moans loudly, and ${mentionPos} dick drips with precum.` 
+                    + `${authorName}'s cock fills ${mentionName}'s ass with cum, the hot liquid overflowing and pooling at their feet.`
+                ],
             },
             'boypussy': { 'redirect': 'boipussy' },
             'girlcock': { 'redirect': 'boipussy' },
                     
             'custom': {
                 'tags': ['cum'],
+                'global_tag_excludes': [ ],
                 'messages': [
                     tempArgs.join(' '),
                 ],
@@ -247,7 +256,7 @@ module.exports = {
         let option = resolveLocation(args[1], tributeOptions);
 
         const site = new Gelbooru(message);
-        const siteSearch = site.search([...option.tags, ...globalTags]);
+        const siteSearch = site.search([...option.tags, ...globalTags.filter(f => !option.global_tag_excludes.includes(f))]);
 
         incrementCount(author, firstMention,
             () => { reply(message, author, authorName, firstMention, mentionName, option, siteSearch, site); });        

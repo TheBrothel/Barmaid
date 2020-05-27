@@ -225,12 +225,12 @@ module.exports = {
             'toes': { 'redirect': 'feet' },
             
             'boipussy': {
-                'tags': ['cum_in_ass', 'trap', 'femboy', '-vaginal', '-female'],
+                'tags': ['cum_in_ass', 'trap', '-vaginal', '-*girl*'],
                  'messages': [
                      `${mentionName} spreads ${mentionPos} smooth ass, showing it off for ${authorName}.` 
-                     + `${authorName} grabs ${mentionName}'s roughly, poking the tip of ${authorPos} cock into`
+                     + `${authorName} grabs ${mentionName} roughly, poking the tip of ${authorPos} cock into`
                      + `${mentionPos} tight asshole. ${mentionName} moans loudly, and ${mentionPos} dick drips with precum.` 
-                     + `${authorName}'s cock fills ${mentionName}'s ass with cum, the hot liquid overflowing and pooling at their feet`
+                     + `${authorName}'s cock fills ${mentionName}'s ass with cum, the hot liquid overflowing and pooling at their feet.`
                  ],
             },
             'boypussy': { 'redirect': 'boipussy' },

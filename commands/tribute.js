@@ -225,7 +225,7 @@ module.exports = {
             'toes': { 'redirect': 'feet' },
             
             'boipussy': {
-                'tags': ['cum_in_ass', 'trap', '-vaginal', '-*girl*'],
+                'tags': ['cum_in_ass', 'trap', '-vaginal'],
                  'messages': [
                      `${mentionName} spreads ${mentionPos} smooth ass, showing it off for ${authorName}.` 
                      + `${authorName} grabs ${mentionName} roughly, poking the tip of ${authorPos} cock into`

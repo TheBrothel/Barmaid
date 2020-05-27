@@ -214,7 +214,7 @@ module.exports = {
             },
                     
             'feet': {
-                'tags': ['cum_on_feet', 'toes'],
+                'tags': ['cum_on_feet', 'toes', '-vaginal', '-anal'],
                 'messages': [
                     `${authorName} holds ${mentionName}'s feet in both hands, sliding ${authorPos} dick between them.`
                     + ` ${mentionName} giggles as ${authorName} begins thrusting ${authorPos} dick back and forth bewteen`
@@ -222,6 +222,19 @@ module.exports = {
                 ],
             },
             'foot': { 'redirect': 'feet' },
+            'toes': { 'redirect': 'feet' },
+            
+            'boipussy': {
+                'tags': ['cum_in_ass', 'trap', '-vaginal', '-*girl*'],
+                 'messages': [
+                     `${mentionName} spreads ${mentionPos} smooth ass, showing it off for ${authorName}.` 
+                     + `${authorName} grabs ${mentionName} roughly, poking the tip of ${authorPos} cock into`
+                     + `${mentionPos} tight asshole. ${mentionName} moans loudly, and ${mentionPos} dick drips with precum.` 
+                     + `${authorName}'s cock fills ${mentionName}'s ass with cum, the hot liquid overflowing and pooling at their feet.`
+                 ],
+            },
+            'boypussy': { 'redirect': 'boipussy' },
+            'girlcock': { 'redirect': 'boipussy' },
                     
             'custom': {
                 'tags': ['cum'],

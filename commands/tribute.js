@@ -29,8 +29,12 @@ module.exports = {
         const mentionPos = getMemberPronounPossessive(firstMention);
         const mentionObj = getMemberPronounObject(firstMention);
 
+        // Stash our custom text, if we need it later.
+        let tempArgs = args.slice();
+        tempArgs.splice(0, 2);
+
         //Make sure there was a user tagged
-        if(!firstMention || args.length > 2){
+        if(!firstMention){
             return message.channel.send(`The correct syntax of the command is "$tribute <@user> [cum-location]". cum-location is optional.`);
         }
 
@@ -218,9 +222,16 @@ module.exports = {
                 ],
             },
             'foot': { 'redirect': 'feet' },
+                    
+            'custom': {
+                'tags': ['cum'],
+                'messages': [
+                    tempArgs.join(' '),
+                ],
+            },
         };
 
-        const option = resolveLocation(args[1], tributeOptions);
+        let option = resolveLocation(args[1], tributeOptions);
 
         const site = new Gelbooru(message);
         const siteSearch = site.search([...option.tags, ...globalTags]);

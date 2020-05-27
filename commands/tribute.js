@@ -30,7 +30,7 @@ module.exports = {
         const mentionObj = getMemberPronounObject(firstMention);
 
         //We will add to this, but only if necessary later on!
-        var customText = ``;
+        var customText = '';
 
         //Make sure there was a user tagged
         if(!firstMention){
@@ -232,11 +232,12 @@ module.exports = {
         };
 
         //If we have custom, this *should* populate the var customText with the user text before we actually use ${customText}
-        if(args[1] == 'custom'){
-            for(i = 2; i < args.length; i++){
-                customText = customText + args[i];
-            }
-            customText = customText + "the if statement works lol";
+        if(args[1] === 'custom'){
+            let trashArgs = args;
+
+            trashArgs.splice(0, 2);
+
+            customText = trashArgs.join(' ');
         }
 
         const option = resolveLocation(args[1], tributeOptions);

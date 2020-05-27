@@ -206,15 +206,17 @@ module.exports = {
                     + ` hard cock against ${mentionName}'s defenseless ear. Eventually, ${authorSub} pulls`
                     + ` ${authorPos} hips back enough to press the head of ${authorPos} leaking cock into the`
                     + ` exposed ear and unloads waves of hot, sticky cum, trying to soak ${mentionName}'s brain in it directly.`,
+            },
                     
             'feet': {
                     'tags': ['cum_on_feet', 'toes'],
                     'messages': [
-                      `${authorName} holds ${mentionPos}'s feet in both hands, sliding ${authorPos} dick between them.`
-                    + ` ${mentionName} giggles as ${authorName} begins thrusting ${authorPos} dick back and forth bewteen`
-                    + `the soles of ${mentionPos}'s feet. ${authorName} groans and spews hot cum all over ${mentionName}'s feet and ankles`
-                ],
+                        `${authorName} holds ${mentionName}'s feet in both hands, sliding ${authorPos} dick between them.`
+                        + ` ${mentionName} giggles as ${authorName} begins thrusting ${authorPos} dick back and forth bewteen`
+                        + ` the soles of ${mentionPos} feet. ${authorName} groans and spews hot cum all over ${mentionName}'s feet and ankles.`,
+                    ],
             },
+            'foot': { 'redirect': 'feet' },
         };
 
         const option = resolveLocation(args[1], tributeOptions);

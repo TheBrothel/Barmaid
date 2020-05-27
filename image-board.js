@@ -162,7 +162,8 @@ class Gelbooru extends JSONImageBoard  {
 			'-urine',
 			'-pregnant',
             '-furry', 
-            '-*absurdres', 
+			'-*absurdres', 
+			'-rating:safe',
 		];
 
 		super(
@@ -236,6 +237,7 @@ class Yandere extends JSONImageBoard  {
 		const forcedTags = [
 			'order:random',
 			'-loli',
+			'-rating:safe'
 		];
 
 		super(

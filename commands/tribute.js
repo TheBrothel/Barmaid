@@ -98,6 +98,25 @@ module.exports = {
                     + ` teases at the balls with cum drunk hands. With a grunt and a slow pullout, ${authorName} cums`
                     + ` down ${mentionName}'s throat and all over ${mentionPos} tongue, leaving the delicious taste`
                     + ` lingering in ${mentionPos} mouth.`,
+
+                    `${mentionName}'s eyes bulged open wide, ${authorName}'s fat cock in ${mentionPos} mouth pulsing and`
+                    + ` throbbing uncontrollably. ${mentionName} could feel all that hot, thick semen hitting the`
+                    + ` back of ${mentionPos} throat, completely painting ${mentionObj} inside, more and more cum`
+                    + ` gushing down ${mentionPos} throat as if ${authorName} was trying to impregnate ${mentionName}'s`
+                    + ` stomach. ${authorName} finally pulled out, scraping ${authorPos} cock across ${mentionName}'s`
+                    + ` tongue, the flavour of ${authorPos} spent seed mixing with ${mentionPos} throat slime,`
+                    + ` ${mentionName}'s eyes rolled back as ${mentionSub} drooled semen out helplessly, skullfucked`
+                    + ` completely dumb.`,
+
+                    `${authorName} grabbed ${mentionName}'s head by ${mentionPos} hair, using ${mentionPos} mouth to jerk`
+                    + ` ${authorPos} cock off like ${mentionName} was just an onahole to ${authorObj}, ${authorPos}`
+                    + ` balls slapping against ${mentionPos} chin as ${mentionSub} was roughly used, ${mentionPos}`
+                    + ` throat nothing but friction for ${authorName}'s thick, throbbing cock. ${mentionName} felt`
+                    + ` ${authorName}'s grip tighten, forcing ${mentionObj} to look up at ${authorObj} as the fat dick`
+                    + ` violating ${mentionPos} throat pulsed and throbbed violently, a hot stream of semen rushing out`
+                    + ` into ${mentionName}'s throat hole as ${authorName} used ${mentionObj} as a human condom, emptying ${authorPos}`
+                    + ` balls right into ${mentionPos} throat hole, before pulling out and wiping ${authorPos} cock clean on`
+                    + ` ${mentionPos} slutty face.`,
                 ],
             },
             'tongue': { 'redirect': 'mouth' },

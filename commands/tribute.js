@@ -97,12 +97,15 @@ module.exports = {
         }
 
         // Build the gendered tags based on our participant counts.
-        if(maleCount === 1) globalTags.push('1boy');
+        if(maleCount === 0) globalTags.push('-*boy*');
+        else if(maleCount === 1) globalTags.push('1boy');
         else if(maleCount > 1) globalTags.push(`${maleCount}boys`);
 
-        if(femaleCount + futaCount === 1) globalTags.push('1girl');
+        if(femaleCount + futaCount === 0) globalTags.push('-*girl*');
+        else if(femaleCount + futaCount === 1) globalTags.push('1girl');
         else if(femaleCount + futaCount > 1) globalTags.push(`${femaleCount + futaCount}girls`);
 
+        if(futaCount === 0) globalTags.push('-futa*');
         if(futaCount > 0 && maleCount > 0) globalTags.push('futa_with_male');
         if(futaCount > 0 && femaleCount > 0) globalTags.push('futa_with_female');
         if(futaCount > 1 && femaleCount === 0 && maleCount === 0) globalTags.push('futa_with_futa');

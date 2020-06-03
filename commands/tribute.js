@@ -107,8 +107,6 @@ module.exports = {
         if(futaCount > 0 && femaleCount > 0) globalTags.push('futa_with_female');
         if(futaCount > 1 && femaleCount === 0 && maleCount === 0) globalTags.push('futa_with_futa');
 
-        console.log(globalTags);
-
         // Define the locations and texts.
         const tributeOptions = {
             'face': {

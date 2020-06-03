@@ -68,6 +68,34 @@ module.exports = {
         if(authorGenderRole.name === 'futa') futaCount++;
         if(mentionGenderRole.name === 'futa') futaCount++;
 
+        if(authorGenderRole.name === 'other'){
+            switch(Math.floor(Math.random() * 3)){
+                case 0:
+                    maleCount++;
+                    break;
+                case 1:
+                    femaleCount++;
+                    break;
+                case 2:
+                    futaCount++;
+                    break;
+            }
+        }
+
+        if(mentionGenderRole.name === 'other'){
+            switch(Math.floor(Math.random() * 3)){
+                case 0:
+                    maleCount++;
+                    break;
+                case 1:
+                    femaleCount++;
+                    break;
+                case 2:
+                    futaCount++;
+                    break;
+            }
+        }
+
         // Build the gendered tags based on our participant counts.
         if(maleCount === 1) globalTags.push('1boy');
         else if(maleCount > 1) globalTags.push(`${maleCount}boys`);
@@ -78,6 +106,8 @@ module.exports = {
         if(futaCount > 0 && maleCount > 0) globalTags.push('futa_with_male');
         if(futaCount > 0 && femaleCount > 0) globalTags.push('futa_with_female');
         if(futaCount > 1 && femaleCount === 0 && maleCount === 0) globalTags.push('futa_with_futa');
+
+        console.log(globalTags);
 
         // Define the locations and texts.
         const tributeOptions = {

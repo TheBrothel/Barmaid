@@ -1,4 +1,4 @@
-const { parseMentions, getMemberPronounSubject, getMemberPronounPossessive, getMemberPronounObject } = require('../message-utils.js');
+const { parseMentions, getMemberPronounSubject, getMemberPronounPossessive, getMemberPronounObject, getMemberGenderRole } = require('../message-utils.js');
 const { DB } = require('../db.js');
 const { Gelbooru } = require('../image-board.js');
 const Discord = require('discord.js');
@@ -23,11 +23,13 @@ module.exports = {
         const authorSub = getMemberPronounSubject(message.member);
         const authorPos = getMemberPronounPossessive(message.member);
         const authorObj = getMemberPronounObject(message.member);
+        const authorGenderRole = getMemberGenderRole(message.member);
 
         const mentionName = firstMention.displayName;
         const mentionSub = getMemberPronounSubject(firstMention);
         const mentionPos = getMemberPronounPossessive(firstMention);
         const mentionObj = getMemberPronounObject(firstMention);
+        const mentionGenderRole = getMemberGenderRole(firstMention);
 
         // Stash our custom text, if we need it later.
         let tempArgs = args.slice();
@@ -39,12 +41,11 @@ module.exports = {
         }
 
         if(author.id == firstMention.user.id){
-            return message.channel.send(`What kind of sick narcissist cum tributes themself?!?`);
+            return message.channel.send(`What kind of sick narcissist cum tributes ${authorObj}self?!?`);
         }
 
-        const globalTags = [ 
-            '1girl', 
-            '1boy', 
+        // Tags we want applied to every query.
+        let globalTags = [ 
             '-animated*', 
             '-webm', 
             '-comic', 
@@ -53,8 +54,35 @@ module.exports = {
             '-orc',
         ];
 
+        // Counts of the participant genders.
+        let maleCount = 0;
+        let femaleCount = 0;
+        let futaCount = 0;
+
+        if(authorGenderRole.name === 'male') maleCount++;
+        if(mentionGenderRole.name === 'male') maleCount++;
+
+        if(authorGenderRole.name === 'female') femaleCount++;
+        if(mentionGenderRole.name === 'female') femaleCount++;
+
+        if(authorGenderRole.name === 'futa') futaCount++;
+        if(mentionGenderRole.name === 'futa') futaCount++;
+
+        // Build the gendered tags based on our participant counts.
+        if(maleCount === 1) globalTags.push('1boy');
+        else if(maleCount > 1) globalTags.push(`${maleCount}boys`);
+
+        if(femaleCount + futaCount === 1) globalTags.push('1girl');
+        else if(femaleCount + futaCount > 1) globalTags.push(`${femaleCount + futaCount}girls`);
+
+        if(futaCount > 0 && maleCount > 0) globalTags.push('futa_with_male');
+        if(futaCount > 0 && femaleCount > 0) globalTags.push('futa_with_female');
+        if(futaCount > 1 && femaleCount === 0 && maleCount === 0) globalTags.push('futa_with_futa');
+
+        // Define the locations and texts.
         const tributeOptions = {
             'face': {
+                'is_valid': () => { return true },
                 'tags': ['cum_on_face', '-vaginal', '-anal'],
                 'global_tag_excludes': [ ],
                 'messages': [
@@ -82,6 +110,7 @@ module.exports = {
             'forehead': { 'redirect': 'face' },
 
             'mouth': {
+                'is_valid': () => { return true },
                 'tags': ['cum_in_mouth', '-vaginal', '-anal'],
                 'global_tag_excludes': [ ],
                 'messages': [
@@ -130,6 +159,7 @@ module.exports = {
             'stomach': { 'redirect': 'mouth' },
 
             'breasts': {
+                'is_valid': () => { return femaleCount === 1 },
                 'tags': ['cum_on_breasts', '-vaginal', '-anal'],
                 'global_tag_excludes': [ ],
                 'messages': [
@@ -150,6 +180,7 @@ module.exports = {
             'tit': { 'redirect': 'breasts' },
 
             'pussy': {
+                'is_valid': () => { return femaleCount === 1 },
                 'tags': ['cum_in_pussy', '-anal'],
                 'global_tag_excludes': [ ],
                 'messages': [
@@ -183,6 +214,7 @@ module.exports = {
             'cocksleeve': { 'redirect': 'pussy' },
 
             'ass': {
+                'is_valid': () => { return true },
                 'tags': ['cum_in_ass', '-vaginal'],
                 'global_tag_excludes': [ ],
                 'messages': [
@@ -208,6 +240,7 @@ module.exports = {
             'asshole': { 'redirect': 'ass' },
 
             'ear': {
+                'is_valid': () => { return true },
                 'tags': ['ear_insertion', '-tentacles', '-slugs'],
                 'global_tag_excludes': [ ],
                 'messages': [
@@ -220,6 +253,7 @@ module.exports = {
             },
                     
             'feet': {
+                'is_valid': () => { return true },
                 'tags': ['cum_on_feet', 'toes', '-vaginal', '-anal'],
                 'global_tag_excludes': [ ],
                 'messages': [
@@ -232,6 +266,7 @@ module.exports = {
             'toes': { 'redirect': 'feet' },
             
             'boipussy': {
+                'is_valid': () => { return maleCount + futaCount === 2 },
                 'tags': ['cum_in_ass', 'trap', '-vaginal', '2boys'],
                 'global_tag_excludes': ['1girl', '1boy'],
                 'messages': [
@@ -245,6 +280,7 @@ module.exports = {
             'girlcock': { 'redirect': 'boipussy' },
                     
             'custom': {
+                'is_valid': () => { return false },
                 'tags': ['cum'],
                 'global_tag_excludes': [ ],
                 'messages': [
@@ -299,7 +335,7 @@ function resolveLocation(requestedLocation, options) {
         option = options[requestedLocation];
     }
     else {
-        option = [...Object.entries(options)].random()[1];
+        option = [...Object.entries(options).filter((f) => { return 'is_valid' in f[1] && f[1]['is_valid']() })].random()[1];
     }
 
     while(option.redirect) {

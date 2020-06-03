@@ -1,5 +1,40 @@
 const Discord = require('discord.js');
 
+const GenderRoles = {
+    'RP - Male': {
+        name: 'male',
+        pronouns: {
+            subject: 'he',
+            object: 'him',
+            possessive: 'his'
+        }
+    },
+    'RP - Female': {
+        name: 'female',
+        pronouns: {
+            subject: 'she',
+            object: 'her',
+            possessive: 'her'
+        }
+    },
+    'RP - Futa': {
+        name: 'futa',
+        pronouns: {
+            subject: 'she',
+            object: 'her',
+            possessive: 'her'
+        }
+    },
+    'default': {
+        name: 'other',
+        pronouns: {
+            subject: 'they',
+            object: 'them',
+            possessive: 'their'
+        }
+    },
+};
+
 function getUserFromMention(mention) {
 	if (!mention) return;
 
@@ -34,38 +69,34 @@ function authorIsAdmin(message) {
     return message.member.permissions.has(Discord.Permissions.ADMINISTRATOR);
 }
 
-function getMemberPronounSubject(member) {
-    return getMemberPronoun(member, {
-        'RP - Female': 'she',
-        'RP - Male': 'he',
-        'default': 'they',
-    });
-}
-
-function getMemberPronounPossessive(member) {
-    return getMemberPronoun(member, {
-        'RP - Female': 'her',
-        'RP - Male': 'his',
-        'default': 'their',
-    });
-}
-
-function getMemberPronounObject(member) {
-    return getMemberPronoun(member, {
-        'RP - Female': 'her',
-        'RP - Male': 'him',
-        'default': 'them',
-    });
-}
-
-function getMemberPronoun(member, map) {
-    for (const [role, word] of Object.entries(map)) {
+// Returns the array of stuff associated with the member's
+// chosen gender role.
+function getMemberGenderRole(member) {
+    for (const [role, properties] of Object.entries(GenderRoles)) {
         if(member.roles.cache.find(f => f.name === role)){
-            return word;
+            return properties;
         }
     }
 
-    return map['default'];
+    return GenderRoles['default'];
+}
+
+function getMemberPronounSubject(member) {
+    return getMemberPronoun(member, 'subject');
+}
+
+function getMemberPronounPossessive(member) {
+    return getMemberPronoun(member, 'possessive');
+}
+
+function getMemberPronounObject(member) {
+    return getMemberPronoun(member, 'object');
+}
+
+function getMemberPronoun(member, partOfSpeech) {
+    var props = getMemberGenderRole(member);
+
+    return props.pronouns[partOfSpeech];
 }
 
 module.exports = {
@@ -75,4 +106,5 @@ module.exports = {
     getMemberPronounPossessive,
     getMemberPronounSubject,
     getMemberPronounObject,
+    getMemberGenderRole,
 }

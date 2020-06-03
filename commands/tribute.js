@@ -159,7 +159,7 @@ module.exports = {
             'stomach': { 'redirect': 'mouth' },
 
             'breasts': {
-                'is_valid': () => { return femaleCount === 1 },
+                'is_valid': () => { return femaleCount + futaCount > 0 },
                 'tags': ['cum_on_breasts', '-vaginal', '-anal'],
                 'global_tag_excludes': [ ],
                 'messages': [
@@ -180,7 +180,7 @@ module.exports = {
             'tit': { 'redirect': 'breasts' },
 
             'pussy': {
-                'is_valid': () => { return femaleCount === 1 },
+                'is_valid': () => { return femaleCount + futaCount > 0 },
                 'tags': ['cum_in_pussy', '-anal'],
                 'global_tag_excludes': [ ],
                 'messages': [

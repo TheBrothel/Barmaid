@@ -26,7 +26,7 @@ function search(message, tags) {
 		const gif = gifs.random();
 		const link = /href=['"](.+?)['"]/i.exec(gif.querySelector('a').rawAttrs)[1];
 		const video = gif.querySelector('video');
-		const title = gif.querySelector('span').rawText;
+		const title = decodeURIComponent(gif.querySelector('span').rawText);
 
 		const videoUrl = /data\-webm=['"](.+?)['"]/i.exec(video.rawAttrs)[1];
 		const videoFilename = /([^\/]+?\.webm)$/i.exec(videoUrl)[1];

@@ -1,5 +1,0 @@
-{
-	"prefix": "$",
-	"token": "DISCORD_SECRET_BOT_TOKEN",
-	"db": "DATBASE_CONNECTION_STRING"
-}

@@ -23,6 +23,7 @@ module.exports = {
         else{
             let embed = new Discord.MessageEmbed()
                 .setDescription(`${authorName} gingerly pats ${mentionName} on the head.`);
+            message.channel.send(embed);
         }
     }
 }

@@ -322,7 +322,7 @@ module.exports = {
 
         let option = resolveLocation(args[1], tributeOptions);
 
-        const site = new Gelbooru(message);
+        const site = new Gelbooru(message, true);
         const siteSearch = site.search([...option.tags, ...globalTags.filter(f => !option.global_tag_excludes.includes(f))]);
 
         incrementCount(author, firstMention,

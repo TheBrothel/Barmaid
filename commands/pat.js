@@ -22,8 +22,8 @@ module.exports = {
         const authorName = message.member.displayName;
         const mentionName = firstMention.displayName;
 
-        const site = new Gelbooru(message);
-        const post = await site.search(['head_pat', '-loli']);
+        const site = new Gelbooru(message, false);
+        const post = await site.search(['head_pat']);
 
         
         //Check to make sure this is a valid command

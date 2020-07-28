@@ -19,8 +19,8 @@
   "homepage": "https://github.com/TheBrothel/Barmaid#readme",
   "dependencies": {
     "axios": "^0.19.2",
-    "discord.js": "^12.1.1",
+    "discord.js": "^12.2.0",
     "mysql": "^2.18.1",
-    "node-html-parser": "^1.2.15"
+    "node-html-parser": "^1.2.20"
   }
 }

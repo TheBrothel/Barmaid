@@ -6,10 +6,10 @@ module.exports = {
 	description: 'Search for hentai by tags',
 	async execute(message, args) {
 		let sites = [
-			new Gelbooru(message),
-			new Danbooru(message),
-			new BooruXXX(message),
-			new Yandere(message),
+			new Gelbooru(message, true),
+			new Danbooru(message, true),
+			new BooruXXX(message, true),
+			new Yandere(message, true),
 		].filter(f => f.canSearch(args));
 
 		shuffleArray(sites);

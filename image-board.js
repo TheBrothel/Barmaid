@@ -11,6 +11,7 @@ class ImageBoard {
 	postUrl;
 	forcedTags;
 	maxTags;
+	forceNsfw;
 	post = {
 		id: null,
 		image_url: null,
@@ -27,6 +28,7 @@ class ImageBoard {
 		searchUrl, 
 		postUrl, 
 		forcedTags,
+		forceNsfw,
 		maxTags
 	) {
 		this.displayName = displayName;
@@ -35,6 +37,7 @@ class ImageBoard {
 		this.searchUrl = searchUrl;
 		this.postUrl = postUrl;
 		this.forcedTags = forcedTags;
+		this.forceNsfw = forceNsfw;
 		this.maxTags = maxTags;
 	}
 
@@ -47,6 +50,7 @@ class ImageBoard {
 
 	// Performs the search for the given tags.
 	search(tags) {
+		this.isForceNsfwOn();
 		const fullTags = [...this.forcedTags, ...tags].map(f => encodeURIComponent(f));
 
 		if(!this.canSearch(tags)){
@@ -78,6 +82,10 @@ class ImageBoard {
 	doSearch(tags) {
 		return null;
 	}
+
+	//Method stub to check if forceNsfw is being used
+	//Overridable
+	isForceNsfwOn(){}
 
 	// Builds and sends the Discord Embed object 
 	// based on the search results.
@@ -146,11 +154,11 @@ class JSONImageBoard extends ImageBoard {
 };
 
 class Gelbooru extends JSONImageBoard  {
-	constructor(message) {
+	constructor(message, forceNsfw) {
 		const baseUrl = 'https://gelbooru.com/index.php?page=';
 		const searchUrl = baseUrl + 'dapi&s=post&q=index&json=1&tags=';
 		const postUrl = baseUrl + 'post&s=view&id=';
-	
+
 		const forcedTags = [
 			'sort:random',
 			'-loli',
@@ -162,8 +170,7 @@ class Gelbooru extends JSONImageBoard  {
 			'-urine',
 			'-pregnant',
             '-furry', 
-			'-*absurdres', 
-			'-rating:safe',
+			'-*absurdres'
 		];
 
 		super(
@@ -173,9 +180,15 @@ class Gelbooru extends JSONImageBoard  {
 			searchUrl,
 			postUrl,
 			forcedTags,
+			forceNsfw,
 			0
 		);
 	}
+
+	isForceNsfwOn(){
+		if(this.forceNsfw === true)
+		  this.forcedTags.push('-rating:safe')
+	  }
 
 	parseSearchResponse(response) {
 		const firstResponse = response.data.random();
@@ -192,7 +205,7 @@ class Gelbooru extends JSONImageBoard  {
 };
 
 class Danbooru extends JSONImageBoard  {
-	constructor(message) {
+	constructor(message, forceNsfw) {
 		const baseUrl = 'https://danbooru.donmai.us/';
 		const searchUrl = baseUrl + 'posts.json?random=1&tags=';
 		const postUrl = baseUrl + 'posts/';
@@ -208,6 +221,7 @@ class Danbooru extends JSONImageBoard  {
 			searchUrl,
 			postUrl,
 			forcedTags,
+			forceNsfw,
 			2
 		);
 	}
@@ -229,7 +243,7 @@ class Danbooru extends JSONImageBoard  {
 };
 
 class Yandere extends JSONImageBoard  {
-	constructor(message) {
+	constructor(message, forceNsfw) {
 		const baseUrl = 'https://yande.re/';
 		const searchUrl = baseUrl + 'post.json?tags=';
 		const postUrl = baseUrl + 'post/show/';
@@ -247,9 +261,15 @@ class Yandere extends JSONImageBoard  {
 			searchUrl,
 			postUrl,
 			forcedTags,
+			forceNsfw,
 			6
 		);
 	}
+
+	isForceNsfwOn(){
+		if(this.forceNsfw === true)
+		  this.forcedTags.push('-rating:safe')
+	  }
 
 	parseSearchResponse(response) {
 		const firstResponse = response.data.random();
@@ -266,7 +286,7 @@ class Yandere extends JSONImageBoard  {
 };
 
 class BooruXXX extends ImageBoard  {
-	constructor(message) {
+	constructor(message, forceNsfw) {
 		const baseUrl = 'https://booru.xxx/index.php';
 		const searchUrl = baseUrl + '?q=/post/list/';
 		const postUrl = baseUrl + '?q=/post/view/';
@@ -281,6 +301,7 @@ class BooruXXX extends ImageBoard  {
 			searchUrl,
 			postUrl,
 			forcedTags,
+			forceNsfw,
 			0
 		);
 	}

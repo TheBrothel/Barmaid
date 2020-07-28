@@ -103,4 +103,5 @@ dist
 # TernJS port file
 .tern-port
 
+# Don't wanna accidently upload our private keys to the repo lmao.
 config.json

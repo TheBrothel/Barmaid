@@ -186,8 +186,12 @@ class Gelbooru extends JSONImageBoard  {
 	}
 
 	isForceNsfwOn(){
-		if(this.forceNsfw === true)
-		  this.forcedTags.push('-rating:safe')
+		if(this.forceNsfw === true){
+			this.forcedTags.push('-rating:safe')
+		}
+		else if(this.forceNsfw === false){
+			this.forcedTags.push('rating:safe')
+		}
 	  }
 
 	parseSearchResponse(response) {
@@ -267,8 +271,12 @@ class Yandere extends JSONImageBoard  {
 	}
 
 	isForceNsfwOn(){
-		if(this.forceNsfw === true)
-		  this.forcedTags.push('-rating:safe')
+		if(this.forceNsfw === true){
+			this.forcedTags.push('-rating:safe')
+		}
+		else if(this.forceNsfw === false){
+			this.forcedTags.push('rating:safe')
+		}
 	  }
 
 	parseSearchResponse(response) {

@@ -50,7 +50,7 @@ class ImageBoard {
 
 	// Performs the search for the given tags.
 	search(tags) {
-		isForceNsfwOn();
+		this.isForceNsfwOn();
 		const fullTags = [...this.forcedTags, ...tags].map(f => encodeURIComponent(f));
 
 		if(!this.canSearch(tags)){

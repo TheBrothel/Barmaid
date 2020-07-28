@@ -30,6 +30,9 @@ module.exports = {
         if(args.length < 1 || args.length > 1){
             console.log('The correct syntax of this command is "$pat @user", aliases $headpat and $pet also work.');
         }
+        else if(author.id == firstMention.user.id){
+            return message.channel.send('One cannot give oneself cute headpats, one is not ones own imouto.')
+        }
         else{
             let embed = new Discord.MessageEmbed()
                 .setDescription(`${authorName} gingerly pats ${mentionName} on the head.`)

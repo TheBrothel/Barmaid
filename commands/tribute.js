@@ -232,7 +232,7 @@ module.exports = {
                     + ` ${authorPos} thick mayo; ${mentionName} pulled ${authorName}'s cock out of ${mentionPos} mouth, sucking any`
                     + ` remaining cum out of it before opening ${mentionObj} mouth to show off the thick, glistening load on`
                     + ` ${mentionPos} tongue, then slowly and sensuously swallowed it down, looking like ${mentionSub} were savouring`
-                    + ` every~ last~ drop~.`
+                    + ` every~ last~ drop~.`,
                 ],
             },
             'tongue': { 'redirect': 'mouth' },
@@ -374,7 +374,7 @@ module.exports = {
                     + ` As ${authorName} pulled out, ${authorPos} cum leaking down ${mentionName}'s thighs, ${mentionSub} slid down the`
                     + ` wall without the extra support, ending up in a puddle of used semen, ${mentionPos}  tongue mindlessly lapping`
                     + ` it up even as more oozed out of ${mentionPos} fuckholes and ${authorName} discarded ${mentionObj} like a used`
-                    + ` condom in the alleyway to carry on with ${authorPos} day.`
+                    + ` condom in the alleyway to carry on with ${authorPos} day.`,
 
                     `Down on all fours, ${mentionName} was being violated so roughly, ${mentionPos}  bare tits swinging helplessly`
                     + ` as ${authorName} took ${mentionObj} from behind, forcing ${mentionObj} down against the mattress even as`

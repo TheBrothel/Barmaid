@@ -9,18 +9,11 @@ module.exports = {
     description: 'Imoutos are for protecting and headpatting.',
     async execute(message, args){
         
-        //Get stuff to work with
-        //const author = message.author;
-        //const authorName = author.displayName;
-        //const authorName = messsage.member.displayName;
-        //const mentions = parseMentions(message);
-        // const firstMention = mentions[0];
-        //const mentionName = firstMention.displayName;
-
         const author = message.author;
         const firstMention = await [...message.mentions.members][0][1].fetch();
         const authorName = message.member.displayName;
         const mentionName = firstMention.displayName;
+
 
         const site = new Gelbooru(message);
         const siteSearch = site.search('head_pat');

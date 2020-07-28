@@ -132,6 +132,14 @@ module.exports = {
                     + ` ${authorName} jerks ${authorPos} cock with both hands, ${mentionName}'s hands digging into`
                     + ` ${authorPos} legs with anticipation. A few moments and large streams of thick seed spray all`
                     + ` over ${mentionPos} face as ${mentionSub} hears ${authorName} moan out in ecstasy.`,
+
+                    `${mentionName} hungrily jerked ${authorName}'s cock off into ${mentionPos} own face, even as someone`
+                    + ` else was railing the slut in a mating press, pounding away with animalistic lust as ${mentionSub}`
+                    + ` smeared ${authorName}'s precum over ${mentionPos} hot skin. ${authorName}'s cock pulsed harder and`
+                    + ` harder in ${mentionPos} hand until ${authorSub} couldn't hold back any more, suddenly painting`
+                    + ` ${mentionPos} face with slut make up. It seemed that the sight of the whore suddenly getting a thick`
+                    + ` facial pushed ${mentionName}'s other paramour over the edge, their cock pulsing hard inside as`
+                    + ` ${mentionPos} hole got flooded, leaving the slut dripping cum from both ends.`,
                 ],
             },
             'eyes': { 'redirect': 'face' },
@@ -183,6 +191,48 @@ module.exports = {
                     + ` into ${mentionName}'s throat hole as ${authorName} used ${mentionObj} as a human condom, emptying ${authorPos}`
                     + ` balls right into ${mentionPos} throat hole, before pulling out and wiping ${authorPos} cock clean on`
                     + ` ${mentionPos} slutty face.`,
+
+                    `${mentionName}'s choker bulged under the force of ${authorName}'s fat cock choking ${mentionObj},`
+                    + ` ${mentionPos} fuckhole stretched wide open by the thick, throbbing fuckmeat using this tight little`
+                    + ` hole. ${mentionName} glubbed and gagged as ${authorName} grabbed ${mentionPos} hair, using`
+                    + ` ${mentionName}'s throat to scrub along the whole length of ${authorPos} bitchbreaker, using ${mentionPos}`
+                    + ` facehole as if it were just a cocksleeve, ramming harder and harder. As ${mentionName}'s choker snapped`
+                    + ` from the force, ${authorName} suddenly came hard into ${mentionPos} abused throat-hole, cumming so hard`
+                    + ` that ${mentionName} felt cum erupting up through ${mentionPos} nose, making a sticky mess of ${mentionPos}`
+                    + ` throat, mouth, nose and whole face as ${authorName}'s left ${mentionObj} looking like a blowbang whore,`
+                    + ` the remains of the choker hanging limply around ${mentionPos} neck.`,
+
+                    `${authorName}'s hard cock couldn't wait any longer, grunting as ${authorSub} finally unloaded ${authorPos}`
+                    + ` semen into ${mentionName}'s waiting mouth, ${authorPos} shaft visibly pulsing and throbbing as ${authorPos}`
+                    + ` semen coated ${mentionName}'s tongue, filling ${mentionPos} mouth until some thick spurts escaped around the`
+                    + ` edge. ${authorName} pulled back, leaving some thick strings of cum between ${authorPos} cock and ${mentionPos}`
+                    + ` lips.`,
+
+                    `${authorName} jerked ${authorPos} thick cock off above ${mentionName}'s open mouth, ${mentionName} patiently`
+                    + ` waiting for ${mentionPos} salty reward as ${mentionSub} held ${mentionPos} mouth further open with`
+                    + ` ${mentionPos} fingers. ${authorName} jerked harder and faster, groaning as ${authorSub} got closer,`
+                    + ` causing ${mentionName} to stick ${mentionPos} tongue out, hungry for sperm. ${mentionName} soon got`
+                    + ` ${mentionPos} wish, as ${authorName} bucked ${authorPos} hips above ${mentionName}'s face, gripping`
+                    + ` ${authorPos} own cock harder as it suddenly erupted with semen, splattering it all over ${mentionPos}`
+                    + ` tongue and deeper into their mouth, painting the inside of ${mentionName}'s mouth with the semen`
+                    + ` ${mentionSub} so clearly needed, the dirty slut revelling in the sticky tongue-bath ${mentionSub}`
+                    + ` just received.`,
+
+                    `${mentionName} desperately jerked ${authorName}'s cock off with one hand, the tip between ${mentionPos}`
+                    + ` lips, ${mentionPos} tongue lapping up the precum and teasing the sensitive head for the creamy contents`
+                    + ` of ${authorPos} balls. ${mentionName}'s work was soon done as ${authorName}'s cock started jerking in`
+                    + ` ${mentionPos} hand, the burning hot tip suddenly flooding ${mentionPos} mouth with ${authorName}'s thick`
+                    + ` and creamy semen. ${mentionName} continued jerking until every drip was inside ${mentionPos} mouth, before`
+                    + ` pulling ${authorPos} cock out to show off the load on ${mentionPos} tongue, making a big show of swallowing`
+                    + ` it and then licking ${mentionPos} lips, hungry for more.`,
+
+                    `${authorName}'s eyes opened wide as ${mentionName} licked up and down along ${authorPos} cock, already inside`
+                    + ` ${mentionPos} mouth, suddenly feeling ${authorName}'s cock throbbing and pulsing, a hot, thick jet of semen`
+                    + ` hitting the back of ${mentionPos} throat, ${mentionPos}  naked body shaking as ${mentionSub} gargled`
+                    + ` ${authorPos} thick mayo; ${mentionName} pulled ${authorName}'s cock out of ${mentionPos} mouth, sucking any`
+                    + ` remaining cum out of it before opening ${mentionObj} mouth to show off the thick, glistening load on`
+                    + ` ${mentionPos} tongue, then slowly and sensuously swallowed it down, looking like ${mentionSub} were savouring`
+                    + ` every~ last~ drop~.`
                 ],
             },
             'tongue': { 'redirect': 'mouth' },
@@ -204,6 +254,50 @@ module.exports = {
                     + ` ${authorPos} moans. As ${authorSub} nears release, ${mentionSub} pumps faster, the ropes of cum`
                     + ` flying up at first, only to be swallowed by the embrace of the soft tits that brought ${authorObj}`
                     + ` to the edge.`,
+
+                    `${mentionName} bounced ${mentionPos} tits up and down along ${authorName}'s cock, using them to jerk`
+                    + ` ${authorName}'s cock off. ${mentionName} knelt, looking up at ${authorName} while using ${mentionPos}`
+                    + ` soft, pillowy tits as an onahole on ${authorName}'s dick, watching ${authorObj} get closer and closer`
+                    + ` as more precum flowed out all over those sexy tits, biting ${mentionPos} lower lip seductively as`
+                    + ` ${mentionSub} did so. ${authorName} couldn't help but buck ${authorPos} hips against ${mentionPos}`
+                    + ` tits as ${authorSub} got pushed over the edge, ${authorPos} cum erupting out into ${mentionName}'s`
+                    + ` cleavage, completely soaking the tits that were still jerking ${authorPos} orgasming cock off,`
+                    + ` flooding ${mentionPos} cleavage with hot cum, a small lake of it jiggling as ${mentionSub} bounced`
+                    + ` around ${authorPos} dick.`,
+
+                    `${mentionName} made ${authorName} lay down, sitting ${authorPos} legs on ${mentionPos} lap while`
+                    + ` ${mentionName} bent over, wrapping ${mentionPos} heavy tits around ${authorPos} cock, jerking`
+                    + ` off rhythmically, the throbbing cock getting inched closer and closer to orgasm every second,`
+                    + ` every stroke, every rub. ${authorName} couldn't hold back for long, cumming so hard that ${authorPos}`
+                    + ` semen spurted hard from ${mentionName}'s tits, soaking ${mentionObj} from ${mentionPos} tits`
+                    + ` right up to ${mentionPos} hair, leaving ${mentionObj} looking like a used cum sponge. Not that`
+                    + ` ${mentionSub} had any intention of complaining.`,
+
+                    `${authorName} mounted ${mentionName}'s chest, sliding ${authorPos} thick, hard cock between`
+                    + ` ${mentionPos} soft, bare tits, jerking them along the length of their own cock as ${mentionSub}`
+                    + ` moaned, impatient for ${authorPos} cum. The feel of those hot, sexy slut udders wrapped around`
+                    + ` ${authorObj} meant that ${mentionName} wasn't waiting long, a sudden eruption between ${mentionPos}`
+                    + ` tits ending up splattering from ${mentionPos} hairline to ${mentionPos} neck, a thick, sticky coating`
+                    + ` of cum all over ${mentionPos} satisfied face.`,
+
+                    `${mentionName} wrapped ${mentionPos} tits around ${authorName}'s big cock. ${mentionName} starting to`
+                    + ` jerk it between ${mentionPos} tits closer and closer to ${mentionPos} open mouth, before giving up`
+                    + ` what little willpower such a cumslut has and wrapping ${mentionPos} lips around the sticky head,`
+                    + ` desperately jerking ${authorPos} hard cock with ${mentionPos} tits into ${mentionPos} mouth, getting`
+                    + ` more and more needy, begging and moaning around ${authorName}'s cock until feeling ${authorObj}`
+                    + ` starting to pulse and throb in ${mentionPos} mouth, thick hot semen rushing out to cover ${mentionPos}`
+                    + ` tongue. ${mentionName} opened ${mentionPos} mouth, letting the massive, pent up cumload drool out`
+                    + ` of ${mentionPos} mouth all over ${mentionPos} own tits, glazing them completely in ${authorName}'s semen.`,
+
+                    `${mentionName} was too desperate a cumslut to even be able to strip off right now, instead just pulling`
+                    + ` ${authorName}'s cock under ${mentionPos} white t-shirt and starting to jerk ${authorObj} off with`
+                    + ` ${mentionPos}  big, heavy tits, grinding the sensitive flesh up against ${authorPos} throbbing member.`
+                    + ` As ${authorName} drooled precum from the tip, ${mentionName}'s white t-shirt became see-through,`
+                    + ` letting ${authorObj} see ${authorPos} cock being nestled between those heavy slut udders. ${mentionName}`
+                    + ` moaned, desperate for the cum ${mentionSub}'d worked so hard for, jerking harder and faster, as`
+                    + ` ${authorName} was unable to hold back any longer, suddenly erupting between ${mentionPos} tits, smearing`
+                    + ` ${mentionPos} body with a hot, thick load of semen ${mentionSub}'d worked ${mentionPos} tits so hard`
+                    + ` to get, ${mentionPos} white t-shirt as soaked as ${mentionPos} tits. It was going to be another fun walk home~`,
                 ],
             },
             'tits': { 'redirect': 'breasts' },
@@ -233,6 +327,123 @@ module.exports = {
                     + ` inside ${mentionObj} with reckless abbandon. With a mutual grunt and nails digging into soft flesh,`
                     + ` ${authorSub} cums deep inside ${mentionPos} waiting womb, impregnating ${mentionName} with a steady`
                     + ` stream of heavy seed.`
+
+                    `${mentionName}'s eyes rolled back as ${authorName} pulled back on ${mentionPos} thighs, pulling`
+                    + ` ${mentionObj} even harder onto ${authorPos} cock, impaled completely. ${authorName}'s cock was`
+                    + ` ramming against ${mentionName}'s cervix with every thrust, bottoming out in the slut, both bodies`
+                    + ` shaking and trembling with lust. ${mentionName} came so hard that ${mentionSub} almost lost`
+                    + ` consciousness, ${mentionPos} already tight cunt gripping ${authorName}'s cock like a vice, pushing`
+                    + ` ${authorName} over the edge too, cum spurting directly onto ${mentionName}'s cervix, a burning hot`
+                    + ` jet that forced ${mentionName} to cum again, ${mentionPos} eyes rolled back and drooling as`
+                    + ` ${mentionSub} were made into ${authorName}'s fucksleeve.`,
+
+                    `${mentionName} grabbed ${authorName}'s wrists, pulling ${authorPos} throbbing cock deeper into ${mentionPos}`
+                    + ` tight, wet cunt, desperately bucking ${mentionPos} hips back against ${authorName}'s body, femcum and semen`
+                    + ` spraying everywhere as the slut forced ${authorName}'s cock deeper, pounding ${mentionPos} womb full of`
+                    + ` hot, thick semen, ${mentionName}'s tits bouncing wildly as ${mentionSub} orgasmed hard on ${authorName}'s`
+                    + ` cock, ${mentionPos} whole body shaking as ${mentionSub} felt ${authorName} breed a hot, thick load into`
+                    + ` ${mentionObj}.`,
+
+                    `${mentionName} interlaced ${mentionPos} fingers with ${authorName}'s, pulling ${authorName} down against`
+                    + ` ${mentionPos} body, desperately holding ${authorName}'s hands as ${authorPos} cum pumped into ${mentionPos}`
+                    + ` unprotected womb, ${mentionPos} toes curling and ${mentionPos} hips rolling against ${authorObj}, moaning`
+                    + ` and panting happily as ${authorName} emptied ${authorPos} balls into ${mentionPos} fertile cunt.`,
+
+                    `${mentionName}'s body shook hard as ${mentionSub} got railed roughly by ${authorName}'s thick, throbbing cock,`
+                    + ` ${mentionPos} tits bouncing as ${authorPos} cock was forced deeper and deeper, used cum from the last time`
+                    + ` the free-use cumslut's cunt was abused squirting out around ${authorName}'s dick as ${authorSub} used it as`
+                    + ` lube to pound ${mentionObj} harder, faster, deeper, letting out a deep grunt and groan as ${authorSub}`
+                    + ` suddenly started to unload ${authorPos} balls into the well-used cocksleeve pinned under ${authorObj},`
+                    + ` ${authorPos} semen gushing out like a fountain into ${mentionPos} abused cunt, previous cumloads erupting`
+                    + ` out around ${authorName}'s cock as ${authorSub} added ${authorPos} to the list and ticked another tally`
+                    + ` mark off in pen on ${mentionName}'s thighs while ${mentionSub} held the back of ${mentionPos} knees for easy`
+                    + ` access, both for ${authorName} and for whoever would inevitably be filling ${mentionPos} needy, fuckdrunk`
+                    + ` cunt next.`,
+
+                    `${mentionName}'s face and tits were repeatedly forced up against the wall as ${authorName}'s cock pounded into`
+                    + ` ${mentionPos} tight cunt from behind, ${authorPos} hips jerking ${mentionPos} whole body forward. “That...`
+                    + ` all you've... got?” teased ${mentionName}, doing ${mentionPos} best to hold onto ${mentionPos} sanity as`
+                    + ` ${authorName}'s cock spread ${mentionPos} fuckhole wide open, feeling ${mentionPos} self used for friction,`
+                    + ` like a pleasure doll, but needing more, wanting it rougher. Whether or not ${authorSub} knew ${authorSub}'d`
+                    + ` been played by a needy slut just wanting to be used roughly like an onahole, ${authorName} suddenly got rougher,`
+                    + ` ${mentionName}'s eyes rolling back as ${mentionSub} took the pounding ${mentionSub} wanted so badly.`
+                    + ` ${mentionName}'s whole body shook hard against the wall and back against ${authorName} as ${authorSub} rammed`
+                    + ` ${authorPos} cock right in to the hilt one more time, jerking off with ${mentionPos} cervix as ${authorSub}`
+                    + ` violated ${mentionPos} womb; ${mentionSub} came so hard ${mentionSub} almost passed out as ${authorName} came hard,`
+                    + ` raping ${mentionPos} womb roughly, using ${mentionObj} like ${mentionSub} was nothing but a cum receptacle.`
+                    + ` As ${authorName} pulled out, ${authorPos} cum leaking down ${mentionName}'s thighs, ${mentionSub} slid down the`
+                    + ` wall without the extra support, ending up in a puddle of used semen, ${mentionPos}  tongue mindlessly lapping`
+                    + ` it up even as more oozed out of ${mentionPos} fuckholes and ${authorName} discarded ${mentionObj} like a used`
+                    + ` condom in the alleyway to carry on with ${authorPos} day.`
+
+                    `Down on all fours, ${mentionName} was being violated so roughly, ${mentionPos}  bare tits swinging helplessly`
+                    + ` as ${authorName} took ${mentionObj} from behind, forcing ${mentionObj} down against the mattress even as`
+                    + ` ${mentionSub} tried to stay up on ${mentionPos} hands and knees. ${mentionName} couldn't take much more when`
+                    + ` ${authorName}'s cock suddenly started to heat up, practically feeling like it was writhing inside ${mentionObj},`
+                    + ` sending ${mentionObj} completely mad and over the edge, ${mentionPos} tongue hanging out already as`
+                    + ` ${authorName}'s cum erupted directly into ${mentionPos} womb, feeling like ${mentionSub} was getting completely`
+                    + ` and utterly filled up, ${mentionPos} womb feeling swollen, feeling like cum was glazing ${mentionObj} right to`
+                    + ` ${mentionPos}  ovaries, only plugged inside by ${authorName}'s cock. ${mentionName} even came as ${authorName}`
+                    + ` pulled out, feeling ${authorPos} cum gushing out of ${mentionObj} like a used condom.`,
+
+                    `${authorName} rammed ${authorPos} cock into ${mentionName}'s tight, wet cockhole a few more times as ${authorSub}`
+                    + ` suddenly felt ${authorPos} throbbing cock explode inside ${mentionObj} as ${mentionSub} toyed with ${mentionPos}`
+                    + ` own clit, hilting ${authorObj}self right into ${mentionPos} fertile womb as ${mentionSub} got to feel the whole`
+                    + ` shaft of ${authorPos} dick pulsing and throbbing and writhing inside, plastering ${mentionObj} with the contents`
+                    + ` of ${authorPos} balls, panting as ${mentionSub} felt ${mentionObj}self used for ${mentionPos} proper purpose as`
+                    + ` a cum toilet. ${authorName} pulled out slowly once ${authorPos} orgasm subsided, thick ropes of cum spilling out`
+                    + ` of ${mentionName}'s cunt as ${authorSub} pulled out, semen running down onto ${mentionPos} ass and staining the`
+                    + ` floor under ${mentionObj} as ${authorName} observed ${authorPos} handywork and the cumdrunk slut in front of`
+                    + ` ${authorObj} as ${mentionSub} continued mindlessly teasing ${mentionPos} abused, sticky slit and hard clit,`
+                    + ` looking ready for another load already.`,
+
+                    `${mentionName} arched ${mentionPos} back further as ${authorName} grabbed ${mentionPos} hips and pulled`
+                    + ` ${mentionObj} back onto ${authorPos} cock, forcing it deeper and deeper. ${mentionName} threw ${mentionPos}`
+                    + ` head back, gripping the sheets as ${mentionSub} came hard on the cock violating ${mentionObj}, ${mentionPos}`
+                    + ` orgasm growing more intense as ${authorName} continued pounding into ${mentionObj}, ${authorPos} cock`
+                    + ` suddenly erupting a hot, thick creampie into the orgasming slut, leaving ${mentionObj} a panting, sticky mess.`,
+
+                    `${mentionName} ground ${mentionObj}self happily on ${authorName}'s cock, ${mentionPos} tits bouncing hypnotically`
+                    + ` as ${mentionSub} used ${mentionPos} tight cunt to jerk ${authorName}'s cock off, grinding ${mentionPos} hips down`
+                    + ` against ${authorName}'s hips, panting and moaning, ${mentionPos} hands on ${authorName}'s chest for stability,`
+                    + ` ${mentionPos} whole body being used for ${authorName}'s pleasure as ${authorName}'s cock suddenly starts throbbing`
+                    + ` inside ${mentionPos} cunt desperately. ${mentionName} gave a smirk, speeding up ${mentionPos} movement, looking`
+                    + ` smug as ${authorName} suddenly orgasmed into ${mentionPos} waiting cunt, groaning happily as ${mentionSub} felt`
+                    + ` ${mentionObj}self getting filled. ${mentionName} leaned down, sliding a finger under ${mentionPos} short skirt`
+                    + ` to reach the cum leaking out of ${mentionPos} cunt, scooping a fingerful up and bringing it to ${mentionPos} lips,`
+                    + ` sucking it from ${mentionPos} fingers. “Mhmmm, same time tomorrow~?” ${mentionSub} asked playfully as ${mentionSub}`
+                    + ` toyed with ${authorName}'s cum on ${mentionPos} tongue.`,
+
+                    `“Come on, bitch, is that all you've got~?” ${mentionSub} panted playfully, gripping ${authorName}'s hips`
+                    + ` as ${mentionSub} rammed ${mentionPos} own down against ${authorObj}, ${mentionPos} tight cunt wrapped`
+                    + ` around ${authorName}'s cock while ${authorSub} groaned helplessly, being used like a cum dispenser by`
+                    + ` this cum-hungry slut. “Or is this what you want, you naughty little whore~?” ${mentionName} asked as`
+                    + ` ${mentionSub} slipped a couple of fingers down to ${authorName}'s ass, taking ${authorObj} by surprise,`
+                    + ` the sudden stimulation pushing ${authorObj} over the edge and giving ${mentionName} exactly what`
+                    + ` ${mentionSub} wanted: ${authorName}'s cum suddenly erupting inside ${mentionObj}. ${mentionName} gave`
+                    + ` ${authorName} a superior smirk after forcing ${authorName} to submit to ${mentionPos} tight cunt.`
+                    + ` “Ara~ ara~ what a dirty slut you are, cumming so hard just from me teasing your ass~” ${mentionSub}`
+                    + ` added, sliding off from ${authorName}'s cock, holding open ${mentionPos} cunt so ${authorName} could`
+                    + ` see ${authorPos} own cum drooling out of ${mentionObj}. “Mhmmm, does my new bitch want to lick me`
+                    + ` clean~?” ${mentionSub} asked, licking ${mentionPos}  lips.`,
+
+                    `${authorName} pushed ${mentionName}'s legs back over ${mentionPos} head, pressing ${mentionObj} into`
+                    + ` the ground as ${authorSub} pounded ${mentionPos} tight cockhole, mating pressing the desperately`
+                    + ` orgasming slut, unable to resist even if ${mentionSub} wanted to as ${authorName}'s semen painted`
+                    + ` every inch of ${mentionPos} cunt with thick, creamy white semen. ${mentionName} shuddered in submission`
+                    + ` to ${authorName}'s cock as ${authorSub} made ${mentionObj} ${authorPos} bitch.`,
+
+                    `${authorName} rammed ${authorPos} throbbing cock into ${mentionName}'s wet cunt, ${authorPos} hands on`
+                    + ` ${mentionName}'s thighs, pushing them back against ${mentionPos} body, mating pressing the slut into`
+                    + ` submission while ${mentionName} desperately jerked someone else off onto ${mentionPos} own face,`
+                    + ` grinding the sticky tip right against ${mentionPos} hot skin. ${authorName} pounded ${mentionName}'s`
+                    + ` cunt harder and harder, desperately masturbating using ${mentionPos} tight cockhole, getting closer`
+                    + ` and closer, ${authorPos} balls slapping against ${mentionObj} ass. As ${authorName} was right at the`
+                    + ` edge, ${authorSub} saw the person getting a handjob explode in ${mentionName}'s hand, completely`
+                    + ` splattering ${mentionPos} face with semen, the filthy sight pushing ${authorName} over the edge too;`
+                    + ` ${authorSub} rammed ${authorPos} hips against ${mentionName} one more time as ${authorPos} cock throbbed`
+                    + ` and pulsed deep inside, flooding ${mentionName}'s womb with thick, potent cum, pulling out to leave`
+                    + ` the slut dripping cum from both ends.`,
                 ],
             },
             'cunt': { 'redirect': 'pussy' },
@@ -270,18 +481,18 @@ module.exports = {
             },
             'asshole': { 'redirect': 'ass' },
 
-            'ear': {
-                'is_valid': () => { return true },
-                'tags': ['ear_insertion', '-tentacles', '-slugs'],
-                'global_tag_excludes': [ ],
-                'messages': [
-                    `${authorName} grabs ${mentionName}'s head in both hands, covering ${mentionPos}`
-                    + ` face with ${authorPos} palm as ${authorSub} roughly rubs ${authorPos}`
-                    + ` hard cock against ${mentionName}'s defenseless ear. Eventually, ${authorSub} pulls`
-                    + ` ${authorPos} hips back enough to press the head of ${authorPos} leaking cock into the`
-                    + ` exposed ear and unloads waves of hot, sticky cum, trying to soak ${mentionName}'s brain in it directly.`,
-                ],
-            },
+            // 'ear': {
+            //     'is_valid': () => { return true },
+            //     'tags': ['ear_insertion', '-tentacles', '-slugs'],
+            //     'global_tag_excludes': [ ],
+            //     'messages': [
+            //         `${authorName} grabs ${mentionName}'s head in both hands, covering ${mentionPos}`
+            //         + ` face with ${authorPos} palm as ${authorSub} roughly rubs ${authorPos}`
+            //         + ` hard cock against ${mentionName}'s defenseless ear. Eventually, ${authorSub} pulls`
+            //         + ` ${authorPos} hips back enough to press the head of ${authorPos} leaking cock into the`
+            //         + ` exposed ear and unloads waves of hot, sticky cum, trying to soak ${mentionName}'s brain in it directly.`,
+            //     ],
+            // },
                     
             'feet': {
                 'is_valid': () => { return true },

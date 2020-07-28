@@ -154,7 +154,7 @@ class JSONImageBoard extends ImageBoard {
 };
 
 class Gelbooru extends JSONImageBoard  {
-	constructor(message) {
+	constructor(message, forceNsfw) {
 		const baseUrl = 'https://gelbooru.com/index.php?page=';
 		const searchUrl = baseUrl + 'dapi&s=post&q=index&json=1&tags=';
 		const postUrl = baseUrl + 'post&s=view&id=';
@@ -205,7 +205,7 @@ class Gelbooru extends JSONImageBoard  {
 };
 
 class Danbooru extends JSONImageBoard  {
-	constructor(message) {
+	constructor(message, forceNsfw) {
 		const baseUrl = 'https://danbooru.donmai.us/';
 		const searchUrl = baseUrl + 'posts.json?random=1&tags=';
 		const postUrl = baseUrl + 'posts/';
@@ -243,7 +243,7 @@ class Danbooru extends JSONImageBoard  {
 };
 
 class Yandere extends JSONImageBoard  {
-	constructor(message) {
+	constructor(message, forceNsfw) {
 		const baseUrl = 'https://yande.re/';
 		const searchUrl = baseUrl + 'post.json?tags=';
 		const postUrl = baseUrl + 'post/show/';
@@ -286,7 +286,7 @@ class Yandere extends JSONImageBoard  {
 };
 
 class BooruXXX extends ImageBoard  {
-	constructor(message) {
+	constructor(message, forceNsfw) {
 		const baseUrl = 'https://booru.xxx/index.php';
 		const searchUrl = baseUrl + '?q=/post/list/';
 		const postUrl = baseUrl + '?q=/post/view/';

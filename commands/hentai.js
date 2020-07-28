@@ -7,8 +7,8 @@ module.exports = {
 	async execute(message, args) {
 		let sites = [
 			new Gelbooru(message, true),
-			new Danbooru(message),
-			new BooruXXX(message),
+			new Danbooru(message, true),
+			new BooruXXX(message, true),
 			new Yandere(message, true),
 		].filter(f => f.canSearch(args));
 

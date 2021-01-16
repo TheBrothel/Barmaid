@@ -169,7 +169,7 @@ class Gelbooru extends JSONImageBoard  {
 			'-blood',
 			'-urine',
 			'-pregnant',
-            '-furry', 
+			'-furry', 
 			'-*absurdres'
 		];
 
@@ -188,13 +188,15 @@ class Gelbooru extends JSONImageBoard  {
 	isForceNsfwOn(){
 		if(this.forceNsfw === true){
 			this.forcedTags.push('-rating:safe')
+
+			return
 		}
-		else if(this.forceNsfw === false){
-			this.forcedTags.push('rating:safe')
-		}
-	  }
+
+		this.forcedTags.push('rating:safe')
+	}
 
 	parseSearchResponse(response) {
+		console.log(response)
 		const firstResponse = response.data.random();
 
 		return {

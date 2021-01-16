@@ -38,16 +38,12 @@ module.exports = {
           for(let i = 0; i < rows.length; i++){
             const rank = i + page_offset + 1;
             const userId = rows[i]['target_id'];
-
-            if(!userId)
-              continue;
-
             const user = message.client.users.resolve(userId);
+            let username = userId || 'Unknown'
 
-            if(!user)
-              continue;
-
-            const username = user.username;
+            if(user)
+              username = user.username;
+              
             const total = rows[i]['SUM(times)'];
 
             output_strings.push(`#${rank} - **${username}** : ${nf.format(total)}`);

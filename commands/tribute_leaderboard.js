@@ -32,18 +32,18 @@ module.exports = {
         FROM (SELECT target_id, SUM(times) FROM cum_tribute_data \
         GROUP BY target_id ORDER BY SUM(times) DESC LIMIT ${page_offset}, ${page_length}) a, \
         (SELECT COUNT(DISTINCT target_id) AS targets FROM cum_tribute_data) t`,
-        (rows, fields) => {
+        async (rows, fields) => {
           const total_targets = rows[0]['targets'];
 
           for(let i = 0; i < rows.length; i++){
             const rank = i + page_offset + 1;
             const userId = rows[i]['target_id'];
-            const user = message.client.users.resolve(userId);
+            const user = await message.client.users.fetch(userId);
             let username = userId || 'Unknown'
 
             if(user)
               username = user.username;
-              
+
             const total = rows[i]['SUM(times)'];
 
             output_strings.push(`#${rank} - **${username}** : ${nf.format(total)}`);

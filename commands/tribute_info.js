@@ -47,7 +47,7 @@ module.exports = {
             try{
               embed.addFields(
                 {
-                  name: `Total Loads from ${firstMention.username}`, value: `${rows[0][0]}`
+                  name: `Total Loads from ${firstMention.username}`, value: `${rows[0].times}`
                 }
               );
             } catch (TypeError){
@@ -60,7 +60,7 @@ module.exports = {
             try{
               embed.addFields(
                 {
-                  name: `Total Loads to ${firstMention.username}`, value: `${rows[0][1]}`
+                  name: `Total Loads to ${firstMention.username}`, value: `${rows[1].times}`
                 }
               );
             } catch (TypeError){

@@ -196,7 +196,6 @@ class Gelbooru extends JSONImageBoard  {
 	}
 
 	parseSearchResponse(response) {
-		console.log(response)
 		const firstResponse = response.data.random();
 
 		return {

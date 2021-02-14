@@ -20,7 +20,11 @@ module.exports = {
         DB.query(`SELECT times FROM cum_tribute_data WHERE user_id = '${firstMention.id}' AND target_id = '${secondMention.id}'`, 
         (rows, fields) => {
           //Notify everyone of the orgasm count!
-          return message.channel.send(`${firstMention.username} has tributed ${rows[0]['times']} loads to ${secondMention.username}`);
+          try{
+            return message.channel.send(`${firstMention.username} has tributed ${rows[0]['times']} loads to ${secondMention.username}`);
+          } catch (TypeError){
+            return message.channel.send(`It appears that ${firstMention.username} hasn't tributed any loads to ${secondMention.username}`)
+          }
         }
       );
     },

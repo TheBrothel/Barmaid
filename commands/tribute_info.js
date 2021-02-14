@@ -43,7 +43,7 @@ module.exports = {
           .setTitle(`:file_folder: Cumdump Single User Info`);
           //Execute Query
           DB.query(`SELECT SUM(times) AS times FROM cum_tribute_data WHERE user_id = '${firstMention.id}' UNION SELECT SUM(times) AS times FROM cum_tribute_data WHERE target_id = '${firstMention.id}'`,
-          (rows, fields) => {
+          (rows) => {
             try{
               embed.addFields(
                 {

@@ -5,7 +5,7 @@ const Discord = require('discord.js');
 module.exports = {
     name: 'tribute_info',
     description: 'Who came on/in whom?',
-    execute(message, args){
+    async execute(message, args){
         //Get stuff we need to work with
         const mentions = parseMentions(message);
         const firstMention = mentions[0];

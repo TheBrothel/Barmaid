@@ -14,27 +14,64 @@ module.exports = {
         if(!args[0] || args.length > 2){
             return message.channel.send('The correct syntax of this command is "$tribute_info <@tributer> <@tributee>"');
         }
-        if(firstMention.id == null || secondMention.id == null){
-          return message.channel.send(`One or more of the mention IDs was null, unable to execute this command`);
-        }
-        let embed = new Discord.MessageEmbed()
-        .setTitle(':file_folder: Cumdump Info');
-        //Execute command
-        DB.query(`SELECT times FROM cum_tribute_data WHERE user_id = '${firstMention.id}' AND target_id = '${secondMention.id}'`, 
-        (rows, fields) => {
-          //Notify everyone of the orgasm count!
-          try{
-            embed.addFields(
-              {name: `Loads from ${firstMention.username} to ${secondMention.username}`, value: `${rows[0]['times']}`}
-              );
-          } catch (TypeError){
-            embed.addFields(
-              {name: `Loads from ${firstMention.username} to ${secondMention.username}`, value: `0`}
-              );
+        if(!(secondMention == null)){
+          if(firstMention.id == null){
+            return message.channel.send(`One or more of the mention IDs was null, unable to execute this command`);
           }
-
-          return message.channel.send(embed);
+          let embed = new Discord.MessageEmbed()
+          .setTitle(':file_folder: Cumdump User to User Info');
+          //Execute command
+          DB.query(`SELECT times FROM cum_tribute_data WHERE user_id = '${firstMention.id}' AND target_id = '${secondMention.id}'`, 
+          (rows, fields) => {
+            //Notify everyone of the orgasm count!
+            try{
+              embed.addFields(
+                {name: `Loads from ${firstMention.username} to ${secondMention.username}`, value: `${rows[0]['times']}`}
+                );
+            } catch (TypeError){
+              embed.addFields(
+                {name: `Loads from ${firstMention.username} to ${secondMention.username}`, value: `0`}
+                );
+            }
+  
+            return message.channel.send(embed);
+          }
+        );
         }
-      );
+        else {
+          let embed = new Discord.MessageEmbed()
+          .setTitle(`:file_folder: Cumdump Single User Info`);
+          //Execute Query
+          DB.query(`SELECT SUM(times) AS times FROM cum_tribute_data WHERE user_id = '${firstMention.id}' UNION SELECT SUM(times) AS times FROM cum_tribute_data WHERE target_id = '${firstMention.id}'`,
+          (rows, fields) => {
+            try{
+              embed.addFields(
+                {
+                  name: `Total Loads from ${firstMention.username}`, value: `${rows[0][0]}`
+                }
+              );
+            } catch (TypeError){
+              embed.addFields(
+                {
+                  name: `Total Loads from ${firstMention.username}`, value: `0`
+                }
+              );
+            }
+            try{
+              embed.addFields(
+                {
+                  name: `Total Loads to ${firstMention.username}`, value: `${rows[0][1]}`
+                }
+              );
+            } catch (TypeError){
+              embed.addFields(
+                {
+                  name: `Total Loads to ${firstMention.username}`, value: `0`
+                }
+              );
+              }
+            }
+          );
+        }
     },
 };

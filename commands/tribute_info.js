@@ -1,5 +1,6 @@
 const { parseMentions } = require('../message-utils.js');
 const { DB } = require('../db.js');
+const Discord = require('discord.js');
 
 module.exports = {
     name: 'tribute_info',
@@ -13,11 +14,26 @@ module.exports = {
         if(!args[0] || args.length > 2){
             return message.channel.send('The correct syntax of this command is "$tribute_info <@tributer> <@tributee>"');
         }
+        if(firstMention.id == null || secondMention.id == null){
+          return message.channel.send(`One or more of the mention IDs was null, unable to execute this command`);
+        }
+        let embed = new Discord.MessageEmbed()
+        .setTitle(':file_folder: Cumdump Info');
         //Execute command
         DB.query(`SELECT times FROM cum_tribute_data WHERE user_id = '${firstMention.id}' AND target_id = '${secondMention.id}'`, 
         (rows, fields) => {
           //Notify everyone of the orgasm count!
-          return message.channel.send(`${firstMention.username} has tributed ${rows[0]['times']} loads to ${secondMention.username}`);
+          try{
+            embed.addFields(
+              {name: `Loads from ${firstMention.username} to ${secondMention.username}`, value: `${rows[0]['times']}`}
+              );
+          } catch (TypeError){
+            embed.addFields(
+              {name: `Loads from ${firstMention.username} to ${secondMention.username}`, value: `0`}
+              );
+          }
+
+          return message.channel.send(embed);
         }
       );
     },

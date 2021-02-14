@@ -14,26 +14,29 @@ module.exports = {
         if(!args[0] || args.length > 2){
             return message.channel.send('The correct syntax of this command is "$tribute_info <@tributer> <@tributee>"');
         }
+        if(firstMention.id == null){
+          return message.channel.send(`One or more of the mention IDs was null, unable to execute this command`);
+        }
+        const firstMentionUser = await message.client.users.fetch(firstMention.id);
+        const firstMentionUsername = firstMentionUser.username;
         if(!(secondMention == null)){
-          if(firstMention.id == null){
-            return message.channel.send(`One or more of the mention IDs was null, unable to execute this command`);
-          }
+          const secondMentionUser = await message.client.users.fetch(secondMention.id);
+          const secondMentionUsername = secondMentionUser.username;
           let embed = new Discord.MessageEmbed()
           .setTitle(':file_folder: Cumdump User to User Info');
           //Execute command
-          DB.query(`SELECT times FROM cum_tribute_data WHERE user_id = '${firstMention.id}' AND target_id = '${secondMention.id}'`, 
+          DB.query(`SELECT times FROM cum_tribute_data WHERE user_id = '${firstMentionUser}' AND target_id = '${secondMentionUser}'`, 
           (rows, fields) => {
             //Notify everyone of the orgasm count!
             try{
               embed.addFields(
-                {name: `Loads from ${firstMention.username} to ${secondMention.username}`, value: `${rows[0]['times']}`}
+                {name: `Loads from ${firstMentionUsername} to ${secondMentionUsername}`, value: `${rows[0]['times']}`}
                 );
             } catch (TypeError){
               embed.addFields(
-                {name: `Loads from ${firstMention.username} to ${secondMention.username}`, value: `0`}
+                {name: `Loads from ${firstMentionUsername} to ${secondMentionUsername}`, value: `0`}
                 );
             }
-  
             return message.channel.send(embed);
           }
         );
@@ -42,35 +45,18 @@ module.exports = {
           let embed = new Discord.MessageEmbed()
           .setTitle(`:file_folder: Cumdump Single User Info`);
           //Execute Query
-          DB.query(`SELECT SUM(times) AS times FROM cum_tribute_data WHERE user_id = '${firstMention.id}' UNION SELECT SUM(times) AS times FROM cum_tribute_data WHERE target_id = '${firstMention.id}'`,
+          DB.query(`SELECT SUM(times) AS times FROM cum_tribute_data WHERE user_id = '${firstMentionUser}' UNION SELECT SUM(times) AS times FROM cum_tribute_data WHERE target_id = '${firstMentionUser}'`,
           (rows) => {
-            try{
-              embed.addFields(
-                {
-                  name: `Total Loads from ${firstMention.username}`, value: `${rows[0].times}`
-                }
-              );
-            } catch (TypeError){
-              embed.addFields(
-                {
-                  name: `Total Loads from ${firstMention.username}`, value: `0`
-                }
-              );
-            }
-            try{
-              embed.addFields(
-                {
-                  name: `Total Loads to ${firstMention.username}`, value: `${rows[1].times}`
-                }
-              );
-            } catch (TypeError){
-              embed.addFields(
-                {
-                  name: `Total Loads to ${firstMention.username}`, value: `0`
-                }
-              );
+            embed.addFields(
+              {
+                name: `Total Loads from ${firstMentionUsername}`, value: `${rows && rows[0] ? rows[0].times : 0}`
+                
+              },
+              {
+                name: `Total Loads to ${firstMentionUsername}`, value: `${rows && rows[1] ? rows[1].times : 0}`
               }
-              return message.channel.send(embed);
+            );
+            return message.channel.send(embed);
             }
           );
         }

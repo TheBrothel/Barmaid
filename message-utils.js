@@ -107,4 +107,5 @@ module.exports = {
     getMemberPronounSubject,
     getMemberPronounObject,
     getMemberGenderRole,
+    GenderRoles,
 }

@@ -526,7 +526,23 @@ module.exports = {
                 'global_tag_excludes': [ ],
                 'messages': [
                     `Stomach full of ladybirds, ${authorName} lowers ${authorObj}self onto ${mentionName}'s attendant face.`
-                    + ` ${authorName.uc()} looks up to the sky... and prays for forgiveness`
+                    + ` ${authorName.uc()} looks up to the sky... and prays for forgiveness`,
+
+                    `${authorName} looked down at ${mentionName}'s eager face, as if to ask whether ${mentionSub}`
+                    + ` was really sure this was what ${mentionSub} wanted. The gleam in ${mentionPos} eye told ${authorObj}`
+                    + ` that ${authorSub} needn't have worried, taking a deep breath and lowering ${authorPos} bare ass`
+                    + ` onto ${mentionPos} face, shuffling around a little to get comfortable.`
+                    + ` Suddenly ${authorSub} jerked up when ${authorSub} felt ${mentionPos} tongue invading ${authorPos} wet hole.`
+                    + ` Biting ${authorPos} lip, ${authorSub} started to grind ${authorObj}self down against ${mentionPos} face,`
+                    + ` smearing ${authorPos} juices over ${mentionObj}, grinding against ${mentionPos} tongue while`
+                    + ` ${mentionSub} groaned in appreciation that ${authorSub} was enjoying ${mentionPos} face, ${authorPos} new seat.`
+                    + ` Hearing this, ${authorSub} got more bold, grabbing a handful of ${mentionPos} hair to force ${authorObj}self`
+                    + ` harder against ${mentionObj}, grinding down, squeezing ${authorPos} face for pleasure, moaning out quietly at first`
+                    + ` but getting louder as ${authorSub} got closer to climax, suddenly tightening ${authorPos} grip on ${mentionPos} hair`
+                    + ` and ${authorPos} thighs around ${mentionPos} face as ${authorSub} utterly soaked ${mentionName}'s face with`
+                    + ` ${authorPos} sticky fucksauce, ${authorPos} hips shaking as ${authorSub} came hard on ${mentionObj}.`
+                    + ` Once ${authorSub} came down from ${authorObj} orgasm, ${authorSub} gave herself a wry smile;`
+                    + ` ${authorName} was going to enjoy this new chair fully before ${authorSub} let ${mentionObj} go.`
                 ]
             },
             'facesitting': { 'redirect': 'facesit'},

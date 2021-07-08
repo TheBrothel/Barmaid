@@ -571,7 +571,7 @@ function reply(message, author, authorName, firstMention, mentionName, option, s
 
         siteSearch.then((post) => {            
             let embed = new Discord.MessageEmbed()
-                .setImage(post.image_url)
+                .setImage(post && post.image_url)
                 .setDescription(option.messages.random())
                 .addField(`Loads from ${authorName}`, tributesFromThisUser, true)
                 .addField(`Total loads for ${mentionName}`, totalTributes, true)

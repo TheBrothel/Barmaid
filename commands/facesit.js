@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const tribute = require('./tribute.js');
 const { execute } = require('./tribute.js');
 const tribute = require('./tribute.js');
 

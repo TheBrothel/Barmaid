@@ -521,12 +521,12 @@ module.exports = {
             'boypussy': { 'redirect': 'boipussy' },
             'girlcock': { 'redirect': 'boipussy' },
             'facesit': {
-                'is_valid': () => { return true },
-                'tags': ['facesitting', 'face_sitting'],
+                'is_valid': () => true,
+                'tags': ['facesitting'],
                 'global_tag_excludes': [ ],
                 'messages': [
                     `Stomach full of ladybirds, ${authorName} lowers ${authorObj}self onto ${mentionName}'s attendant face.`
-                    + `${authorName.uc()} looks up to the sky... and prays for forgiveness`
+                    + ` ${authorName.uc()} looks up to the sky... and prays for forgiveness`
                 ]
             },
                     

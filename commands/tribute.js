@@ -481,18 +481,18 @@ module.exports = {
             },
             'asshole': { 'redirect': 'ass' },
 
-            // 'ear': {
-            //     'is_valid': () => { return true },
-            //     'tags': ['ear_insertion', '-tentacles', '-slugs'],
-            //     'global_tag_excludes': [ ],
-            //     'messages': [
-            //         `${authorName} grabs ${mentionName}'s head in both hands, covering ${mentionPos}`
-            //         + ` face with ${authorPos} palm as ${authorSub} roughly rubs ${authorPos}`
-            //         + ` hard cock against ${mentionName}'s defenseless ear. Eventually, ${authorSub} pulls`
-            //         + ` ${authorPos} hips back enough to press the head of ${authorPos} leaking cock into the`
-            //         + ` exposed ear and unloads waves of hot, sticky cum, trying to soak ${mentionName}'s brain in it directly.`,
-            //     ],
-            // },
+            'ear': {
+                 'is_valid': () => { return true },
+                 'tags': ['ear_insertion', '-tentacles', '-slugs'],
+                 'global_tag_excludes': [ ],
+                 'messages': [
+                     `${authorName} grabs ${mentionName}'s head in both hands, covering ${mentionPos}`
+                     + ` face with ${authorPos} palm as ${authorSub} roughly rubs ${authorPos}`
+                     + ` hard cock against ${mentionName}'s defenseless ear. Eventually, ${authorSub} pulls`
+                     + ` ${authorPos} hips back enough to press the head of ${authorPos} leaking cock into the`
+                     + ` exposed ear and unloads waves of hot, sticky cum, trying to soak ${mentionName}'s brain in it directly.`,
+                 ],
+             },
                     
             'feet': {
                 'is_valid': () => { return true },
@@ -590,6 +590,9 @@ function resolveLocation(requestedLocation, options) {
     }
     else {
         option = [...Object.entries(options).filter((f) => { return 'is_valid' in f[1] && f[1]['is_valid']() })].random()[1];
+        if(option === options["ear"]) {
+            option = resolveLocation(requestedLocation, options)
+        }
     }
 
     while(option.redirect) {

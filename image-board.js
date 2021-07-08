@@ -123,7 +123,7 @@ class ImageBoard {
 	//
 	// Overridable.
 	buildPostURL(post) {
-		return this.postUrl + post.id;
+		return this.postUrl + ((post && post.id) || '0');
 	}
 
 	sendNoResultsError(tags) {

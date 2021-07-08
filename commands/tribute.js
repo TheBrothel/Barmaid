@@ -525,9 +525,6 @@ module.exports = {
                 'tags': ['facesitting'],
                 'global_tag_excludes': [ ],
                 'messages': [
-                    `Stomach full of ladybirds, ${authorName} lowers ${authorObj}self onto ${mentionName}'s attendant face.`
-                    + ` ${authorName.uc()} looks up to the sky... and prays for forgiveness`,
-
                     `${authorName} looked down at ${mentionName}'s eager face, as if to ask whether ${mentionSub}`
                     + ` was really sure this was what ${mentionSub} wanted. The gleam in ${mentionPos} eye told ${authorObj}`
                     + ` that ${authorSub} needn't have worried, taking a deep breath and lowering ${authorPos} bare ass`
@@ -542,7 +539,10 @@ module.exports = {
                     + ` and ${authorPos} thighs around ${mentionPos} face as ${authorSub} utterly soaked ${mentionName}'s face with`
                     + ` ${authorPos} sticky fucksauce, ${authorPos} hips shaking as ${authorSub} came hard on ${mentionObj}.`
                     + ` Once ${authorSub} came down from ${authorPos} orgasm, ${authorSub} gave ${authorObj}self a wry smile;`
-                    + ` ${authorName} was going to enjoy this new chair fully before ${authorSub} let ${mentionObj} go.`
+                    + ` ${authorName} was going to enjoy this new chair fully before ${authorSub} let ${mentionObj} go.`,
+
+                    `Stomach full of ladybirds, ${authorName} lowers ${authorObj}self onto ${mentionName}'s attendant face.`
+                    + ` ${authorName.uc()} looks up to the sky... and prays for forgiveness`
                 ]
             },
             'facesitting': { 'redirect': 'facesit'},

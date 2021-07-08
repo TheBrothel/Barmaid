@@ -481,18 +481,18 @@ module.exports = {
             },
             'asshole': { 'redirect': 'ass' },
 
-            // 'ear': {
-            //     'is_valid': () => { return true },
-            //     'tags': ['ear_insertion', '-tentacles', '-slugs'],
-            //     'global_tag_excludes': [ ],
-            //     'messages': [
-            //         `${authorName} grabs ${mentionName}'s head in both hands, covering ${mentionPos}`
-            //         + ` face with ${authorPos} palm as ${authorSub} roughly rubs ${authorPos}`
-            //         + ` hard cock against ${mentionName}'s defenseless ear. Eventually, ${authorSub} pulls`
-            //         + ` ${authorPos} hips back enough to press the head of ${authorPos} leaking cock into the`
-            //         + ` exposed ear and unloads waves of hot, sticky cum, trying to soak ${mentionName}'s brain in it directly.`,
-            //     ],
-            // },
+            'ear': {
+                 'is_valid': () => { return true },
+                 'tags': ['ear_insertion', '-tentacles', '-slugs'],
+                 'global_tag_excludes': [ ],
+                 'messages': [
+                     `${authorName} grabs ${mentionName}'s head in both hands, covering ${mentionPos}`
+                     + ` face with ${authorPos} palm as ${authorSub} roughly rubs ${authorPos}`
+                     + ` hard cock against ${mentionName}'s defenseless ear. Eventually, ${authorSub} pulls`
+                     + ` ${authorPos} hips back enough to press the head of ${authorPos} leaking cock into the`
+                     + ` exposed ear and unloads waves of hot, sticky cum, trying to soak ${mentionName}'s brain in it directly.`,
+                 ],
+             },
                     
             'feet': {
                 'is_valid': () => { return true },
@@ -520,6 +520,34 @@ module.exports = {
             },
             'boypussy': { 'redirect': 'boipussy' },
             'girlcock': { 'redirect': 'boipussy' },
+            'facesit': {
+                'is_valid': () => true,
+                'tags': ['facesitting'],
+                'global_tag_excludes': [ ],
+                'messages': [
+                    `${authorName} looked down at ${mentionName}'s eager face, as if to ask whether ${mentionSub}`
+                    + ` was really sure this was what ${mentionSub} wanted. The gleam in ${mentionPos} eye told ${authorObj}`
+                    + ` that ${authorSub} needn't have worried, taking a deep breath and lowering ${authorPos} bare ass`
+                    + ` onto ${mentionPos} face, shuffling around a little to get comfortable.`
+                    + ` Suddenly ${authorSub} jerked up when ${authorSub} felt ${mentionPos} tongue invading ${authorPos} wet hole.`
+                    + ` Biting ${authorPos} lip, ${authorSub} started to grind ${authorObj}self down against ${mentionPos} face,`
+                    + ` smearing ${authorPos} juices over ${mentionObj}, grinding against ${mentionPos} tongue while`
+                    + ` ${mentionSub} groaned in appreciation that ${authorSub} was enjoying ${mentionPos} face, ${authorPos} new seat.`
+                    + ` Hearing this, ${authorSub} got more bold, grabbing a handful of ${mentionPos} hair to force ${authorObj}self`
+                    + ` harder against ${mentionObj}, grinding down, squeezing ${authorPos} face for pleasure, moaning out quietly at first`
+                    + ` but getting louder as ${authorSub} got closer to climax, suddenly tightening ${authorPos} grip on ${mentionPos} hair`
+                    + ` and ${authorPos} thighs around ${mentionPos} face as ${authorSub} utterly soaked ${mentionName}'s face with`
+                    + ` ${authorPos} sticky fucksauce, ${authorPos} hips shaking as ${authorSub} came hard on ${mentionObj}.`
+                    + ` Once ${authorSub} came down from ${authorPos} orgasm, ${authorSub} gave ${authorObj}self a wry smile;`
+                    + ` ${authorName} was going to enjoy this new chair fully before ${authorSub} let ${mentionObj} go.`,
+
+                    `Stomach full of ladybirds, ${authorName} lowers ${authorObj}self onto ${mentionName}'s attendant face.`
+                    + ` ${authorName.uc()} looks up to the sky... and prays for forgiveness`
+                ]
+            },
+            'facesitting': { 'redirect': 'facesit'},
+            'smother': { 'redirect': 'facesit'},
+            'smothering': { 'redirect': 'facesit'},
                     
             'custom': {
                 'is_valid': () => { return false },
@@ -559,7 +587,7 @@ function reply(message, author, authorName, firstMention, mentionName, option, s
 
         siteSearch.then((post) => {            
             let embed = new Discord.MessageEmbed()
-                .setImage(post.image_url)
+                .setImage(post && post.image_url)
                 .setDescription(option.messages.random())
                 .addField(`Loads from ${authorName}`, tributesFromThisUser, true)
                 .addField(`Total loads for ${mentionName}`, totalTributes, true)
@@ -578,6 +606,9 @@ function resolveLocation(requestedLocation, options) {
     }
     else {
         option = [...Object.entries(options).filter((f) => { return 'is_valid' in f[1] && f[1]['is_valid']() })].random()[1];
+        if(option === options["ear"]) {
+            option = resolveLocation(requestedLocation, options)
+        }
     }
 
     while(option.redirect) {

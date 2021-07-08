@@ -9,6 +9,7 @@ module.exports = {
         'smother',
         'smothering'
     ],
+    'examples': ['$facesit @someone', '$smother @someone'],
     description: 'Tribute facesit alias',
     async execute(message, args) {
         await tribute.execute(message, [...args, "facesit"])

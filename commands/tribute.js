@@ -529,6 +529,9 @@ module.exports = {
                     + ` ${authorName.uc()} looks up to the sky... and prays for forgiveness`
                 ]
             },
+            'facesitting': { 'redirect': 'facesit'},
+            'smother': { 'redirect': 'facesit'},
+            'smothering': { 'redirect': 'facesit'},
                     
             'custom': {
                 'is_valid': () => { return false },

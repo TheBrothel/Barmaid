@@ -532,7 +532,7 @@ module.exports = {
                     + ` was really sure this was what ${mentionSub} wanted. The gleam in ${mentionPos} eye told ${authorObj}`
                     + ` that ${authorSub} needn't have worried, taking a deep breath and lowering ${authorPos} bare ass`
                     + ` onto ${mentionPos} face, shuffling around a little to get comfortable.`
-                    + ` Suddenly ${authorwaSub} jerked up when ${authorSub} felt ${mentionPos} tongue invading ${authorPos} wet hole.`
+                    + ` Suddenly ${authorSub} jerked up when ${authorSub} felt ${mentionPos} tongue invading ${authorPos} wet hole.`
                     + ` Biting ${authorPos} lip, ${authorSub} started to grind ${authorObj}self down against ${mentionPos} face,`
                     + ` smearing ${authorPos} juices over ${mentionObj}, grinding against ${mentionPos} tongue while`
                     + ` ${mentionSub} groaned in appreciation that ${authorSub} was enjoying ${mentionPos} face, ${authorPos} new seat.`
@@ -541,7 +541,7 @@ module.exports = {
                     + ` but getting louder as ${authorSub} got closer to climax, suddenly tightening ${authorPos} grip on ${mentionPos} hair`
                     + ` and ${authorPos} thighs around ${mentionPos} face as ${authorSub} utterly soaked ${mentionName}'s face with`
                     + ` ${authorPos} sticky fucksauce, ${authorPos} hips shaking as ${authorSub} came hard on ${mentionObj}.`
-                    + ` Once ${authorSub} came down from ${authorPos} orgasm, ${authorSub} gave ${mentionPos} a wry smile;`
+                    + ` Once ${authorSub} came down from ${authorPos} orgasm, ${authorSub} gave ${mentionObj} a wry smile;`
                     + ` ${authorName} was going to enjoy this new chair fully before ${authorSub} let ${mentionObj} go.`
                 ]
             },

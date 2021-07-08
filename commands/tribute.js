@@ -541,7 +541,7 @@ module.exports = {
                     + ` but getting louder as ${authorSub} got closer to climax, suddenly tightening ${authorPos} grip on ${mentionPos} hair`
                     + ` and ${authorPos} thighs around ${mentionPos} face as ${authorSub} utterly soaked ${mentionName}'s face with`
                     + ` ${authorPos} sticky fucksauce, ${authorPos} hips shaking as ${authorSub} came hard on ${mentionObj}.`
-                    + ` Once ${authorSub} came down from ${authorPos} orgasm, ${authorSub} gave ${mentionObj} a wry smile;`
+                    + ` Once ${authorSub} came down from ${authorPos} orgasm, ${authorSub} gave ${authorObj}self a wry smile;`
                     + ` ${authorName} was going to enjoy this new chair fully before ${authorSub} let ${mentionObj} go.`
                 ]
             },

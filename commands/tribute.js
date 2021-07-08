@@ -548,6 +548,19 @@ module.exports = {
             'facesitting': { 'redirect': 'facesit'},
             'smother': { 'redirect': 'facesit'},
             'smothering': { 'redirect': 'facesit'},
+            'blowjob': {
+                'is_valid': () => true,
+                'tags': ['blowjob'],
+                'global_tag_excludes': [],
+                'messages': [
+
+                ]
+            },
+            'bj': { 'redirect': 'blowjob'},
+            'suck': { 'redirect': 'blowjob'},
+            'swallow': { 'redirect': 'blowjob'},
+            'lick': { 'redirect': 'blowjob'},
+            'beej': { 'redirect': 'blowjob'},
                     
             'custom': {
                 'is_valid': () => { return false },

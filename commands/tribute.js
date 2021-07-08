@@ -522,7 +522,7 @@ module.exports = {
             'girlcock': { 'redirect': 'boipussy' },
             'facesit': {
                 'is_valid': () => true,
-                'tags': ['facesitting'],
+                'tags': ['facesitting', '-fart', '-flatulence'],
                 'global_tag_excludes': [ ],
                 'messages': [
                     `${authorName} looked down at ${mentionName}'s eager face, as if to ask whether ${mentionSub}`
